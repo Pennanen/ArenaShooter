@@ -1,0 +1,100 @@
+Converting GML script: ${project_dir}\scripts\light_init\light_init.gml
+Converted description /// @description light_init(width, height, light_size, ambient_color, quality, iterations)/// @function light_init
+/// @param width
+/// @param  height
+/// @param  light_size
+/// @param  ambient_color
+/// @param  quality
+/// @param  iterations
+
+Converting GML script: ${project_dir}\scripts\light_draw\light_draw.gml
+Converted description /// @description light_draw(x, y, additive, shadows, blur_amount)/// @function light_draw
+/// @param x
+/// @param  y
+/// @param  additive
+/// @param  shadows
+/// @param  blur_amount
+
+Converting GML script: ${project_dir}\scripts\light_create\light_create.gml
+Converted description /// @description light_create(light_sprite, light_scale, light_color, light_alpha, light_angle, shadows)/// @function light_create
+/// @param light_sprite
+/// @param  light_scale
+/// @param  light_color
+/// @param  light_alpha
+/// @param  light_angle
+/// @param  shadows
+
+Converting GML script: ${project_dir}\scripts\light_destroy\light_destroy.gml
+Converted description /// @description light_destroy()/// @function light_destroy
+
+Converting GML script: ${project_dir}\scripts\light_create_caster\light_create_caster.gml
+Converted description /// @description light_create_caster()/// @function light_create_caster
+
+Converting GML script: ${project_dir}\scripts\light_create_caster_from_points\light_create_caster_from_points.gml
+Converted description /// @description light_create_caster_from_points(points_x, points_y)/// @function light_create_caster_from_points
+/// @param points_x
+/// @param  points_y
+
+Converting GML script: ${project_dir}\scripts\light_create_caster_from_path\light_create_caster_from_path.gml
+Converted description /// @description light_create_caster_from_path(path, xorigin, yorigin, xoffset, yoffset)/// @function light_create_caster_from_path
+/// @param path
+/// @param  xorigin
+/// @param  yorigin
+/// @param  xoffset
+/// @param  yoffset
+
+Converting GML script: ${project_dir}\scripts\light_destroy_caster\light_destroy_caster.gml
+Converted description /// @description light_destroy_caster()/// @function light_destroy_caster
+
+Converting GML script: ${project_dir}\scripts\light_set_size\light_set_size.gml
+Converted description /// @description light_set_size(size)/// @function light_set_size
+/// @param size
+
+Converting GML script: ${project_dir}\scripts\light_set_quality\light_set_quality.gml
+Converted builtin - line 8: view_wview -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 8: view_hview -> __view_get( e__VW.HView, 0 )
+Converted description /// @description light_set_quality(quality)/// @function light_set_quality
+/// @param quality
+
+Converting GML script: ${project_dir}\scripts\light_set_ambient_color\light_set_ambient_color.gml
+Converted description /// @description light_set_color(ambient_color)/// @function light_set_color
+/// @param ambient_color
+
+Converting GML script: ${project_dir}\scripts\light_set_iterations\light_set_iterations.gml
+Converted description /// @description light_set_iterations(iterations)/// @function light_set_iterations
+/// @param iterations
+
+Converting GML script: ${project_dir}\scripts\light_set_alpha\light_set_alpha.gml
+Converted description /// @description light_set_alpha(alpha)/// @function light_set_alpha
+/// @param alpha
+
+Converting GML script: ${project_dir}\scripts\light_set_color\light_set_color.gml
+Converted description /// @description light_set_color(color)/// @function light_set_color
+/// @param color
+
+Converting GML script: ${project_dir}\scripts\light_set_rotation\light_set_rotation.gml
+Converted description /// @description light_set_rotation(angle)/// @function light_set_rotation
+/// @param angle
+
+Converting GML script: ${project_dir}\scripts\light_set_sprite\light_set_sprite.gml
+Converted description /// @description light_set_sprite(sprite)/// @function light_set_sprite
+/// @param sprite
+
+Converting GML script: ${project_dir}\scripts\light_set_scale\light_set_scale.gml
+Converted description /// @description light_set_size(size)/// @function light_set_size
+/// @param size
+
+Converting GML script: ${project_dir}\scripts\light_draw_sprite_dark\light_draw_sprite_dark.gml
+Converted description /// @description light_draw_sprite_dark()/// @function light_draw_sprite_dark
+
+Converting GML script: ${project_dir}\scripts\draw_surface_blurred\draw_surface_blurred.gml
+Converted description /// @description draw_surface_blurred(surface, x, y, xscale, yscale, blur_amount)/// @function draw_surface_blurred
+/// @param surface
+/// @param  x
+/// @param  y
+/// @param  xscale
+/// @param  yscale
+/// @param  blur_amount
+
+Added compatibility script 'draw/draw_set_blend_mode.gml'
+Added compatibility script 'draw/draw_set_blend_mode_ext.gml'
