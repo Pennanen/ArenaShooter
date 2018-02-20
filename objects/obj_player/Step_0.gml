@@ -3,7 +3,8 @@ if (hp < 1) {room_restart();}
 
 audio_listener_position(x,y,0);
 audio_emitter_position(global.mainEmitter,x,y,0);
-
+gunClip = gun.magazine;
+gunAmmo = gun.ammo;
 
 if (!dash && !fall){
 if (keyl) physics_apply_impulse(x,y,-force,0);

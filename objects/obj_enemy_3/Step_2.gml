@@ -2,7 +2,7 @@
 image_speed = abs(phy_speed)/4;
 depth = -1*(y/10);
 
-var dir = point_direction(x,y,mpPlanner.x,mpPlanner.y);
+var dir = point_direction(x,y,mpPlanner_air.x,mpPlanner_air.y);
 if (hp < 1) {instance_destroy();instance_create_depth(x,y,depth,obj_explosion)}
 physics_apply_impulse(x,y,lengthdir_x(force,dir),lengthdir_y(force,dir));
 if (phy_speed_x > spd) {phy_speed_x = spd}
@@ -15,7 +15,7 @@ switch(state)
 case "seek_player":
 	{
 	target = obj_player;
-	scr_seek();
+	scr_seek_air();
 	break;
 	}
 }

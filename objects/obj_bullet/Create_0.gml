@@ -1,9 +1,10 @@
 
 //audio
-
 audio_play_sound_on(global.mainEmitter,laser_rifle,0,1);
 
-destroy = 1;
+dmg = 1;
+
+destroy = 0;
 phy_bullet = true;
 particle1 = part_type_create();
 scr_shake(4,4,3);
@@ -28,9 +29,6 @@ depth = -100;
 image_xscale = 0.01;
 image_yscale = 0.01;
 image_alpha = 0;
-spd = 200;
-dir = obj_gun.image_angle;
-physics_apply_impulse(x,y,lengthdir_x(spd,dir),lengthdir_y(spd,dir));
 
 l = instance_create_depth(x,y,-100,obj_light);
 l.target = self;

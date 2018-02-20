@@ -18,7 +18,6 @@ if (can_shoot && target.fire)
 		spd = 122;
 		dir = other.image_angle;
 		physics_apply_impulse(x,y,lengthdir_x(spd,dir),lengthdir_y(spd,dir));
-			
 		}
 	alarm[0] = room_speed/rpm;
 	sprite_index = spr_gun_enemy_shoot;

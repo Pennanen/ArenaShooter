@@ -12,6 +12,8 @@ keyd = false;
 keydash = false;
 
 gun = obj_gun;
+gunClip = 1;
+gunAmmo = 1;
 
 fall = false;
 dashDir = 0;

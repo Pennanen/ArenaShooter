@@ -8,6 +8,6 @@ instance_destroy();
 else
 {
 
-alarm[0] = 15;	
+alarm[0] = 1;	
 	
 }

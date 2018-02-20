@@ -207,6 +207,14 @@
             }
         },
         {
+            "Key": "1ee8633a-9af7-4538-99ce-334e4f4763df",
+            "Value": {
+                "id": "f5e25df0-dc84-4f8d-81af-805d2189b243",
+                "resourcePath": "scripts\\plan_fly\\plan_fly.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1f7293f0-3e60-474d-8f66-b81e881ec370",
             "Value": {
                 "id": "f318f974-4f8b-4994-8f0d-8f8baeefd59b",
@@ -647,6 +655,14 @@
             }
         },
         {
+            "Key": "7325ffd1-4aba-4a2b-a23b-ddfd027af58a",
+            "Value": {
+                "id": "b2fed1a1-f8bb-4631-877d-5ed9e70097ec",
+                "resourcePath": "objects\\obj_path_planner_air\\obj_path_planner_air.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "735488cd-8d6a-44b6-ae40-ae123dc3b9cc",
             "Value": {
                 "id": "3b8313a6-78d2-471e-9098-6a7704da4492",
@@ -716,6 +732,14 @@
                 "id": "cee089a6-129c-4a82-8934-dfd5c6462ffe",
                 "resourcePath": "notes\\compatibility_report_050218_19030636.yy",
                 "resourceType": "GMNotes"
+            }
+        },
+        {
+            "Key": "825515ea-f68d-4787-91d3-18eeebf8ed60",
+            "Value": {
+                "id": "44f6cd01-3370-4383-8da9-355d9968b45a",
+                "resourcePath": "scripts\\scr_draw_ring\\scr_draw_ring.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -971,6 +995,14 @@
             "Value": {
                 "id": "de45c3e0-1755-4f11-9aa3-f7a55a3a7688",
                 "resourcePath": "scripts\\light_set_quality\\light_set_quality.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b2647fde-17d4-4f11-86c5-5a1a107b8bb4",
+            "Value": {
+                "id": "b6a83c43-5548-44f5-af5d-d4cf04562dd8",
+                "resourcePath": "scripts\\scr_seek_air\\scr_seek_air.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1305,11 +1337,13 @@
     ],
     "script_order": [
         "bf54836c-4a49-4d14-9a09-14c20f24ce31",
+        "1ee8633a-9af7-4538-99ce-334e4f4763df",
         "b15903bd-e486-4e42-8c3b-0618ade56076",
         "edd0683f-d02f-463a-84ad-aac1659ad964",
         "7fd8bc53-c58b-4ff2-a16d-45fef7fc6491",
         "9417a352-0547-42aa-b388-ca69c39de10d",
         "f8b037b6-b580-4ca4-bca2-c212b64b6d4a",
+        "b2647fde-17d4-4f11-86c5-5a1a107b8bb4",
         "ad420bc0-197e-4efc-b0df-6ce1b18357de",
         "40f55ff6-c6a2-4025-b3c0-da3440573411",
         "4faeb9b0-d4fd-49fc-aa92-65b49f1e74a3",
@@ -1329,7 +1363,8 @@
         "48523e2c-5790-413c-b1ff-80479c2c2ca1",
         "cedb3da7-cc24-4c60-b289-6c54c7c7d1bb",
         "cfac361c-5a0a-488e-b86a-5dc80794f810",
-        "26343f70-3235-4860-931a-bee098a33db8"
+        "26343f70-3235-4860-931a-bee098a33db8",
+        "825515ea-f68d-4787-91d3-18eeebf8ed60"
     ],
     "tutorial": ""
 }

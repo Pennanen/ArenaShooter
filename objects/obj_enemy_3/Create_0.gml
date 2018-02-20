@@ -6,8 +6,8 @@ leg_angle = 0;
 torso_angle = 0;
 look_angle = 0;
 	
-mpPlanner = instance_create_depth(x,y,0,obj_path_planner);
-mpPlanner.follower = id;
+mpPlanner_air = instance_create_depth(x,y,0,obj_path_planner_air);
+mpPlanner_air.follower = id;
 spd = 37;
 force = 22;
 targetx = 0;
@@ -19,7 +19,7 @@ target = obj_player;
 state = "seek_player";
 
 fire = false;
-maxhp = 6;
+maxhp = 3;
 hp = maxhp;
 
 scaleWiggle = 0;

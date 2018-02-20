@@ -1,4 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 can_shoot = true;
-rpm = 15;
+baserps = 15;
+rps = baserps;
+magazine = 150;
+ammo = magazine;
+reloadTime = 1;
+reload = 0;

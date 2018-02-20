@@ -30,6 +30,8 @@ enemyPool[2] = obj_enemy_3;
 poolMax = 2;
 
 maxEnemies = 0;
+startEnemies = 15;
+interval = 10;
 
 canSpawn = true;
-spawnRate = choose(1,2,3)*room_speed;
+spawnRate = 1;

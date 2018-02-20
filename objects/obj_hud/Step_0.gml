@@ -1,15 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (window_get_fullscreen()){
-w = display_get_width();
-h = display_get_height();
-scale = w/camera_get_view_width(view_camera[0]);}
-else
-{
-w = window_get_width();
-h = window_get_height();
-scale = w/camera_get_view_width(view_camera[0]);
-}
+
+guiX = obj_player.x;
+guiY = obj_player.y;
+
 steps++;
 if (steps >= room_speed)
 	{

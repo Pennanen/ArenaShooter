@@ -24,7 +24,7 @@ scaleWiggle = 0;
 wiggleTime = 0;
 
 fire = false;
-maxhp = 8;
+maxhp = 4;
 hp = maxhp;
 
 gun = instance_create_depth(x,y,depth,obj_gun_enemy);

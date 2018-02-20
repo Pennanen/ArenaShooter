@@ -23,7 +23,7 @@ target = obj_player;
 state = "seek_player";
 
 fire = false;
-maxhp = 6;
+maxhp = 5;
 hp = maxhp;
 
 depth = -y/100;
