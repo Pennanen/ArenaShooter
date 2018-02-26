@@ -3,21 +3,22 @@
 if (instance_exists(target)){
 x = target.x+lengthdir_x(10,image_angle-56);
 y = target.y-3+lengthdir_y(10,image_angle-56);
-rpm = random_range(1.5,3);
 image_angle = target.look_angle
 
 
 if (can_shoot && target.fire)
 	{
+		//audio
+		audio_emitter_position(blastEmi,x,y,0);
+		audio_play_sound_on(blastEmi,laser_blaster,0,1);
 	var tipx = x+lengthdir_x(10,image_angle);
 	var tipy = y+lengthdir_y(10,image_angle);
 	can_shoot = false;
 	b = instance_create_depth(tipx,tipy,depth,obj_enemy_bullet);
 	with(b)
 		{
-		spd = 122;
+		spd = other.gunpower;
 		dir = other.image_angle;
-		physics_apply_impulse(x,y,lengthdir_x(spd,dir),lengthdir_y(spd,dir));
 		}
 	alarm[0] = room_speed/rpm;
 	sprite_index = spr_gun_enemy_shoot;

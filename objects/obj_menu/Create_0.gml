@@ -1,12 +1,13 @@
 
 
+
 keyu = false;
 keyd = false;
 
 keySelect = false;
 
-button[0,0] = "start";
-button[1,0] = "scores"
+button[0,0] = "join";
+button[1,0] = "host"
 button[2,0] = "exit";
 
 button[0,1] = 1;

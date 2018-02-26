@@ -15,8 +15,17 @@ switch(state)
 {
 case "seek_player":
 	{
+	if (point_distance(x,y,obj_player.x,obj_player.y) < 190 
+	&& !collision_line(x,y,obj_player.x,obj_player.y,obj_wall,0,0)) {state = "keep_distance";}
 	target = obj_player;
 	scr_seek();
+	break;
+	}
+case "keep_distance":
+	{
+	scr_keep_distance(200);
+	if (point_distance(x,y,obj_player.x,obj_player.y) > 250 
+	|| collision_line(x,y,obj_player.x,obj_player.y,obj_wall,0,0)) {state = "seek_player";};
 	break;
 	}
 }

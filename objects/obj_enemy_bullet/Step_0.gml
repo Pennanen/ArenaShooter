@@ -10,3 +10,8 @@ else
 	part_emitter_clear(Sname,emitter1);
 	
 }
+x+=lengthdir_x(spd,dir);
+y+=lengthdir_y(spd,dir);
+if (spd > 4.5){spd -=0.15;}
+var hold = 1/spd;
+dir+=random_range(hold,-hold);

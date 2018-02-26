@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+randomize();
 p[0,0] = 96;
 p[0,1] = 96;
 
@@ -30,8 +31,8 @@ enemyPool[2] = obj_enemy_3;
 poolMax = 2;
 
 maxEnemies = 0;
-startEnemies = 15;
-interval = 10;
+startEnemies = 2;
+interval = 15;
 
 canSpawn = true;
 spawnRate = 1;

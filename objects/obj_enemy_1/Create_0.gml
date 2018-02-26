@@ -10,8 +10,8 @@ image_speed = abs(phy_speed)/1;
 	
 mpPlanner = instance_create_depth(x,y,0,obj_path_planner);
 mpPlanner.follower = id;
-spd = 15;
-force = 9;
+spd = 9;
+force = 7;
 targetx = 0;
 targety = 0;
 planStep = 0;
@@ -24,9 +24,10 @@ scaleWiggle = 0;
 wiggleTime = 0;
 
 fire = false;
-maxhp = 4;
+maxhp = 60;
 hp = maxhp;
 
+shootRange = 405;
 gun = instance_create_depth(x,y,depth,obj_gun_enemy);
 gun.target = self;
 	

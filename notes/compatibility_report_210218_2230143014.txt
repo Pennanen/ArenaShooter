@@ -1,0 +1,6 @@
+Converting GML script: ${project_dir}\objects\obj_spawner\Mouse_53.gml
+Converted description /// @description On click a random instance of any of the four objects that draw trails on this example will be created
+
+Added compatibility script 'instance/instance_create.gml'
+Added compatibility script 'object/object_get_depth.gml'
+Added compatibility script '__global_object_depths.gml'

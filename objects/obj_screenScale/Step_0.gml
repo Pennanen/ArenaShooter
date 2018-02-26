@@ -1,5 +1,5 @@
 /// @description Press "F" for Fullscreen Toggle
-if keyboard_check_pressed(ord("F"))
+if keyboard_check_pressed(vk_f1)
 {
     //Toggle Fullscreen
     if window_get_fullscreen()

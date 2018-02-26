@@ -36,7 +36,8 @@ screen_sur = surface_create(app_w * app_xscal, app_h * app_yscal);
 
 
 ///Goto next room
-window_set_fullscreen(true); 
+        window_set_fullscreen(false)
+        window_set_size(w*0.5,h*0.5)
 room_goto_next();
 
 

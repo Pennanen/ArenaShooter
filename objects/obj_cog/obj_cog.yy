@@ -62,7 +62,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "0",
+            "value": "irandom_range(-5,5)",
             "varName": "spd",
             "varType": 0
         },

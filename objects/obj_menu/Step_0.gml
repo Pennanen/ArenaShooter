@@ -23,10 +23,12 @@ if (keySelect)
 	switch(current)
 		{
 		case 0:
-			room_goto(rm_arena_1);
+			room_goto(rm_lobby);
+			alarm[0] = 1;
 			break;
 		case 1:
-			room_goto(rm_score);
+			room_goto(rm_hosting);
+			instance_destroy();
 			break;
 		case 2:
 			game_end();

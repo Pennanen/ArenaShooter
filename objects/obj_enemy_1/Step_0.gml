@@ -6,9 +6,10 @@ leg_angle+=clamp(.7*diff,-8,8);
 torso_angle =  (look_angle+leg_angle)/2;
 look_angle = point_direction(x,y,obj_player.x,obj_player.y);
 
-if (distance_to_object(obj_player)<405 
-&& !collision_line(x,y,obj_player.x,obj_player.y,obj_wall,0,0))
-	{
+if (distance_to_object(obj_player)<shootRange
+&& !collision_line(x,y,obj_player.x,obj_player.y,obj_wall,0,0)
+&& !collision_line(x,y,obj_player.x,obj_player.y,obj_door,0,0))
+{
 	fire = true;	
 	}
 	else

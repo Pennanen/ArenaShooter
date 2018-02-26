@@ -10,10 +10,11 @@ y = target.y;
 else
 {
 	
-	if (scale > 0) {scale-=0.1} else{instance_destroy();}
+	if (scale > 0) {scale-=0.05} else{instance_destroy();}
 	
 }
 if (destroy) 
 	{
 	if (scale > 0) {scale-=multi;multi+=0.025;} else{instance_destroy();}
 	}
+light_set_scale(scale);

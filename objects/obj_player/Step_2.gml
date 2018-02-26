@@ -1,8 +1,8 @@
 
 depth = -1*(y/10);
-if (place_meeting(x,y,obj_wall_no_bullet) && !dash)
+if (place_meeting(x,y,obj_hole) && !dash)
 	{
-	col = collision_point(x,y,obj_wall_no_bullet,0,0);
+	col = collision_point(x,y,obj_hole,0,0);
 	if (instance_exists(col))
 		{
 		if (phy_position_x > col.x && phy_position_x < col.x+col.sprite_width
