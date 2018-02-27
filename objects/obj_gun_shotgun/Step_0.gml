@@ -23,30 +23,35 @@ if (can_shoot && mouse_check_button(mb_left) && ammo >= 4 && !reloading)
 	dmg = other.wpnDmg*random_range(0.9,1.1);
 	spd = other.gunpower;
 	dir = other.image_angle+11;
+	client_send_bullet();
 	}
 	with(b2)
 	{
 	dmg = other.wpnDmg*random_range(0.9,1.1);
 	spd = other.gunpower;
 	dir = other.image_angle+5;
+	client_send_bullet();
 	}
 	with(b3)
 	{
 	dmg = other.wpnDmg*random_range(0.9,1.1);
 	spd = other.gunpower;
 	dir = other.image_angle-5;
+	client_send_bullet();
 	}
 	with(b4)
 	{
 	dmg = other.wpnDmg*random_range(0.9,1.1);
 	spd = other.gunpower;
 	dir = other.image_angle-11;
+	client_send_bullet();
 	}
 	with(b0)
 	{
 	dmg = other.wpnDmg*random_range(0.9,1.1);
 	spd = other.gunpower;
 	dir = other.image_angle;
+	client_send_bullet();
 	}
 
 	obj_player.phy_speed_x +=lengthdir_x(5,obj_player.gun.image_angle-180);

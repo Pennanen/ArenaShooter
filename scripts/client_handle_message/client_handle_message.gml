@@ -9,11 +9,11 @@ switch(message_id)
 	{
 	case 1:
 		client = buffer_read(buffer,buffer_u16);
-		xx = buffer_read(buffer,buffer_u16);
-		yy = buffer_read(buffer,buffer_u16);
-		look_angle = buffer_read(buffer,buffer_u16);
-		torso_angle = buffer_read(buffer,buffer_u16);
-		leg_angle = buffer_read(buffer,buffer_u16);
+		xx = buffer_read(buffer,buffer_f32);
+		yy = buffer_read(buffer,buffer_f32);
+		look_angle = buffer_read(buffer,buffer_f32);
+		torso_angle = buffer_read(buffer,buffer_f32);
+		leg_angle = buffer_read(buffer,buffer_f32);
 		i_index = buffer_read(buffer,buffer_u8);
 		hp = buffer_read(buffer,buffer_u8);
 		gun = buffer_read(buffer,buffer_u16);
@@ -33,7 +33,7 @@ switch(message_id)
 			}
 			else	
 			{
-				l = instance_create_depth(xx,yy,0,obj_playerDummy);
+				l = instance_create_depth(room_width/2,room_height/2,0,obj_playerDummy);
 				clientmap[? string(client)] = l;
 			};
 			

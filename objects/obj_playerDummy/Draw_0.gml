@@ -10,7 +10,7 @@ draw_sprite_ext(leg_sprite,image_index,x,y,image_xscale,image_yscale,leg_angle,c
 //draw gun
 xx = x+lengthdir_x(10,look_angle-56);
 yy = y-5+lengthdir_y(10,look_angle-56);
-draw_sprite_ext(gun.sprite_index,gun_index,xx,yy,1,1,look_angle,c_red,1);
+draw_sprite_ext(gun,gun_index,xx,yy,1,1,look_angle,c_red,1);
 
 
 var dir = torso_angle;

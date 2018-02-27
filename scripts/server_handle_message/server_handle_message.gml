@@ -10,11 +10,11 @@ switch(message_id)
 	{
 	case 1:
 	
-		var xx = buffer_read(buffer, buffer_u16);
-		var yy = buffer_read(buffer, buffer_u16);
-		var look_angle = buffer_read(buffer, buffer_u16);
-		var torso_angle = buffer_read(buffer, buffer_u16);
-		var leg_angle = buffer_read(buffer, buffer_u16);
+		var xx = buffer_read(buffer, buffer_f32);
+		var yy = buffer_read(buffer, buffer_f32);
+		var look_angle = buffer_read(buffer, buffer_f32);
+		var torso_angle = buffer_read(buffer, buffer_f32);
+		var leg_angle = buffer_read(buffer, buffer_f32);
 		var i_index = buffer_read(buffer, buffer_u8);
 		var hp = buffer_read(buffer, buffer_u8);
 		var gun = buffer_read(buffer, buffer_u16);
@@ -23,11 +23,11 @@ switch(message_id)
 		
 		buffer_write(send_buffer, buffer_u8, 1);
 		buffer_write(send_buffer, buffer_u16, client_id_current);
-		buffer_write(send_buffer, buffer_u16, xx);
-		buffer_write(send_buffer, buffer_u16, yy);
-		buffer_write(send_buffer, buffer_u16, look_angle);
-		buffer_write(send_buffer, buffer_u16, torso_angle);
-		buffer_write(send_buffer, buffer_u16, leg_angle);
+		buffer_write(send_buffer, buffer_f32, xx);
+		buffer_write(send_buffer, buffer_f32, yy);
+		buffer_write(send_buffer, buffer_f32, look_angle);
+		buffer_write(send_buffer, buffer_f32, torso_angle);
+		buffer_write(send_buffer, buffer_f32, leg_angle);
 		buffer_write(send_buffer, buffer_u8, i_index);
 		buffer_write(send_buffer, buffer_u8, hp);
 		buffer_write(send_buffer, buffer_u16, gun);
