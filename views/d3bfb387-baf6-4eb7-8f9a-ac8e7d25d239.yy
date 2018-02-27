@@ -11,7 +11,8 @@
         "fdf9ad96-4417-40b9-85ba-718d857c0a3e",
         "e28e5fd8-5fbb-4513-849f-add930fc6528",
         "30f7f69d-3c25-4bd8-b005-7e67cdfeeef2",
-        "851d5709-2a39-4ec7-a00d-58d677ab339c"
+        "851d5709-2a39-4ec7-a00d-58d677ab339c",
+        "116a02f9-503e-49de-bb76-2bcae49b218c"
     ],
     "filterType": "GMScript",
     "folderName": "Networking",

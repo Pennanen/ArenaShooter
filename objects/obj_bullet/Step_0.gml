@@ -13,7 +13,9 @@ else
 }
 x+=lengthdir_x(spd,dir);
 y+=lengthdir_y(spd,dir);
+/*
 if (spd > 3.5){spd -=0.1;}
 var hold = 45/spd;
 dir+=random_range(hold,-hold);
 part_type_scale(particle1,0.1+0.1*dmg,0.1+0.1*dmg);
+*/

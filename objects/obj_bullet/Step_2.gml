@@ -28,3 +28,15 @@ if (colliderInstance != noone)
 		}
 	instance_destroy();
 	}
+	
+//enemy_player
+colliderInstance = collision_line(x,y,x+lengthdir_x(spd,dir),y+lengthdir_y(spd,dir),obj_playerDummy,true,false);
+if (colliderInstance != noone)
+	{	
+	spd = 0;
+	with(colliderInstance)
+		{
+		wiggleTime = 12;
+		}
+	instance_destroy();
+	}

@@ -1,4 +1,4 @@
-
+if (!dead){
 keyl = keyboard_check(ord("A")) ||keyboard_check(vk_left) ;
 keyr = keyboard_check(ord("D")) ||keyboard_check(vk_right) ;
 keyu = keyboard_check(ord("W")) ||keyboard_check(vk_up) ;
@@ -47,3 +47,15 @@ look_angle+=clamp(.7*diff,-15,15);
 
 
 torso_angle =  leg_angle+angle_difference(look_angle,leg_angle)/2 mod 360;
+}
+else //dead
+{
+phy_position_x =dead_location_x;
+phy_position_y =dead_location_y;
+if(hp < maxhp)
+	{
+	alarm[1] = room_speed*deathTimer;
+	hp = maxhp;
+	}
+}
+

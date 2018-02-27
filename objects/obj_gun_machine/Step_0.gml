@@ -23,6 +23,8 @@ if (can_shoot && mouse_check_button(mb_left) && ammo >= 1 && !reloading)
 	dmg = other.wpnDmg*random_range(0.9,1.1);
 	spd = other.gunpower;
 	dir = other.image_angle;
+	
+	client_send_bullet();
 	//physics_apply_impulse(x,y,lengthdir_x(spd,dir),lengthdir_y(spd,dir));
 	}
 	ammo-=1;

@@ -2,8 +2,7 @@
 //audio
 spd = 0;
 dir = 0;
-dmg = 1;
-
+dmg = 10;
 
 particle1 = part_type_create();
 scr_shake(2,2,5);

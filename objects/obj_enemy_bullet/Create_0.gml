@@ -1,4 +1,4 @@
-dmg = 1;
+dmg = 5;
 spd = 1;
 particle1 = part_type_create();
 part_type_sprite(particle1,sprite_index,0,0,0);

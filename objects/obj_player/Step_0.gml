@@ -1,5 +1,5 @@
 
-if (hp < 1) {room_restart();}
+if (hp < 1) {dead = true;}
 
 audio_listener_position(x,y,0);
 audio_emitter_position(global.mainEmitter,x,y,0);

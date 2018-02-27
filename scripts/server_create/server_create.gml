@@ -1,6 +1,6 @@
 var port = argument0;
 server = -1;
-server = network_create_server_raw(network_socket_tcp,port,8);
+server = network_create_server_raw(network_socket_tcp,port,argument1);
 client_id_counter = 0;
 
 clientmap = ds_map_create();
