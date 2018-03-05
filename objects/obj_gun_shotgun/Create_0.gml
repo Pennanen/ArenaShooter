@@ -6,11 +6,11 @@ baserps = 2.4;
 rps = baserps;
 gunpower = 11;
 
-magazine = 24;
-ammo = magazine/2;
+magazine = 15;
+ammo = magazine;
 
 wpnDmg = 8;
-reloadTime = 1;
+reloadTime = 2;
 reload = 0;
 reloading = false;
 	image_speed = 0.4;

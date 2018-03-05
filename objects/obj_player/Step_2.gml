@@ -19,7 +19,7 @@ image_xscale = scale+scaleWiggle;
 image_yscale = scale-scaleWiggle;
 if (wiggleTime > 0){
 scaleWiggle = scr_wiggle(1,-wiggleTime/20,wiggleTime);
-wiggleTime -= 0.5;
+wiggleTime -= 1;
 }
 else
 {

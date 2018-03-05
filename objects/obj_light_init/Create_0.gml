@@ -5,7 +5,7 @@ light_init(room_width*2,room_height*2,1000,col,0.5,45);
 instance_create_depth(x,y,-100,obj_light);
 instance_create_depth(x,y,-100,obj_light_spot);
 
-with(obj_wall)
+with(obj_shadow_caster)
 {
-light_create_caster(0);	
+light_create_caster(0);
 }

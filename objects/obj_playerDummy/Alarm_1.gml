@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+if (enemy = false){
 l = instance_create_depth(x,y,-100,obj_light);
 l.target = self;
 l.scale = 2;
@@ -16,4 +17,4 @@ with(l)
 	{
 	var col = c_red;
 	light_set_color(col);
-	}
+	}}

@@ -1,0 +1,29 @@
+{
+    "id": "5b43bc3a-34da-4fae-88da-690bf3345edf",
+    "modelName": "GMObject",
+    "mvc": "1.0",
+    "name": "obj_shadow_caster",
+    "eventList": [
+        
+    ],
+    "maskSpriteId": "00000000-0000-0000-0000-000000000000",
+    "overriddenProperties": null,
+    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "persistent": false,
+    "physicsAngularDamping": 0.1,
+    "physicsDensity": 0.5,
+    "physicsFriction": 0.2,
+    "physicsGroup": 0,
+    "physicsKinematic": false,
+    "physicsLinearDamping": 0.1,
+    "physicsObject": false,
+    "physicsRestitution": 0.1,
+    "physicsSensor": false,
+    "physicsShape": 1,
+    "physicsShapePoints": null,
+    "physicsStartAwake": true,
+    "properties": null,
+    "solid": false,
+    "spriteId": "e1953bba-8d25-423c-90a3-d3ac4cdfd20c",
+    "visible": true
+}

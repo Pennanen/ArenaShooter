@@ -7,10 +7,10 @@ Notice: An instance can only have one caster attached to it.
 
 var xoffset, yoffset, width, height;
 var yy = argument0;
-xoffset = sprite_get_xoffset(sprite_index)
-yoffset = sprite_get_yoffset(sprite_index)
-width = sprite_get_width(sprite_index)
-height = sprite_get_height(sprite_index)-yy;
+xoffset = sprite_get_xoffset(sprite_index);
+yoffset = sprite_get_yoffset(sprite_index);
+width = sprite_get_width(sprite_index);
+height = sprite_get_height(sprite_index);
 
 _light_points_x[0] = -xoffset
 _light_points_y[0] = -yoffset

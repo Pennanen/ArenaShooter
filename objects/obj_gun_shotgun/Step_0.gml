@@ -20,43 +20,48 @@ if (can_shoot && mouse_check_button(mb_left) && ammo >= 4 && !reloading)
 	image_angle += irandom_range(-1,1);
 	with(b1)
 	{
+	identifier = irandom_range(0,32000);
 	dmg = other.wpnDmg*random_range(0.9,1.1);
 	spd = other.gunpower;
-	dir = other.image_angle+11;
-	client_send_bullet();
+	dir = other.image_angle+9;
+	client_send_bullet(x,y,dir,spd,identifier);
 	}
 	with(b2)
 	{
+	identifier = irandom_range(0,32000);
 	dmg = other.wpnDmg*random_range(0.9,1.1);
 	spd = other.gunpower;
-	dir = other.image_angle+5;
-	client_send_bullet();
+	dir = other.image_angle+4;
+	client_send_bullet(x,y,dir,spd,identifier);
 	}
 	with(b3)
 	{
+	identifier = irandom_range(0,32000);
 	dmg = other.wpnDmg*random_range(0.9,1.1);
 	spd = other.gunpower;
-	dir = other.image_angle-5;
-	client_send_bullet();
+	dir = other.image_angle-4;
+	client_send_bullet(x,y,dir,spd,identifier);
 	}
 	with(b4)
 	{
+	identifier = irandom_range(0,32000);
 	dmg = other.wpnDmg*random_range(0.9,1.1);
 	spd = other.gunpower;
-	dir = other.image_angle-11;
-	client_send_bullet();
+	dir = other.image_angle-9;
+	client_send_bullet(x,y,dir,spd,identifier);
 	}
 	with(b0)
 	{
+	identifier = irandom_range(0,32000);
 	dmg = other.wpnDmg*random_range(0.9,1.1);
 	spd = other.gunpower;
 	dir = other.image_angle;
-	client_send_bullet();
+	client_send_bullet(x,y,dir,spd,identifier);
 	}
 
 	obj_player.phy_speed_x +=lengthdir_x(5,obj_player.gun.image_angle-180);
 	obj_player.phy_speed_y +=lengthdir_y(5,obj_player.gun.image_angle-180);
-	ammo-=4;
+	ammo-=5;
 	audio_play_sound_on(global.mainEmitter,laser_burst,0,1);
 	alarm[0] = room_speed/rps;
 	sprite_index = spr_gun_1_shoot;

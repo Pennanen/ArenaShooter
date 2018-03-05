@@ -3,8 +3,8 @@
 spd = 0;
 dir = 0;
 dmg = 10;
-
 particle1 = part_type_create();
+randomize();
 scr_shake(2,2,5);
 part_type_sprite(particle1,sprite_index,0,0,0);
 
@@ -23,8 +23,8 @@ part_type_life(particle1,12,55);
 emitter1 = part_emitter_create(Sname);
 
 depth = -100;
-image_xscale = 0.01;
-image_yscale = 0.01;
+image_xscale = 0.02;
+image_yscale = 0.02;
 image_alpha = 0;
 
 l = instance_create_depth(x,y,-100,obj_light);

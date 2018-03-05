@@ -13,6 +13,8 @@ else
 }
 x+=lengthdir_x(spd,dir);
 y+=lengthdir_y(spd,dir);
+if (spd > 4.5){spd -=0.15;}
+
 /*
 if (spd > 3.5){spd -=0.1;}
 var hold = 45/spd;

@@ -1,5 +1,4 @@
 
-
 buffer_seek(send_buffer,buffer_seek_start,0);
 
 buffer_write(send_buffer,buffer_u8, 1);
@@ -13,3 +12,5 @@ buffer_write(send_buffer,buffer_u8,obj_player.hp);
 buffer_write(send_buffer,buffer_u16,obj_player.gun.sprite_index);
 buffer_write(send_buffer,buffer_u8,obj_player.gun.image_index);
 network_send_raw(socket,send_buffer,buffer_tell(send_buffer));
+
+

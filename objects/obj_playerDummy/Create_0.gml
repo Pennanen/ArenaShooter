@@ -1,6 +1,8 @@
 
 PlayerName = "Player"
-        
+
+enemy = true; // causes lights to go off etc
+
 maxhp = 100;
 hp = maxhp;
 gun = obj_gun_machine;
@@ -9,9 +11,9 @@ look_angle = 0;
 torso_angle = 0;
 leg_angle = 0;
 
-leg_sprite = spr_e_leg_idle;
-torso_sprite = spr_e_torso_idle;
-head_sprite = spr_e_head_idle;
+leg_sprite = spr_p_leg_idle;
+torso_sprite = spr_p_torso_idle;
+head_sprite = spr_p_head_idle;
 wiggleTime =0;
 scaleWiggle = 0;
 scale = 1;

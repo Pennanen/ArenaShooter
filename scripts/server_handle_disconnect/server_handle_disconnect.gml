@@ -1,5 +1,4 @@
 var socket_id = argument0;
-
 with(clientmap[? string(socket_id)])
 	{
 	instance_destroy();	

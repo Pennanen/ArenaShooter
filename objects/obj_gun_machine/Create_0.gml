@@ -4,8 +4,8 @@ can_shoot = true;
 baserps = 6.567;
 rps = baserps;
 
-magazine = 40;
-ammo = magazine/2;
+magazine = 20;
+ammo = magazine;
 wpnDmg = 10;
 gunpower = 12;
 reloadTime = 1;

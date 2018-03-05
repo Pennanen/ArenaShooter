@@ -3,9 +3,10 @@ instance_create_depth(x,y,0,obj_hud);
 instance_create_depth(x,y,0,obj_gun_machine);
 instance_create_depth(x,y,0,obj_cursor);
 audio_listener_orientation(0,1,0,0,0,1);
+alarm[1] = 30;
 PlayerName = "Player"
 deathTimer = 4;
-dead_location_x = -500;
+dead_location_x = room_width/2;
 dead_location_y = -500;
 dead = false;
 global.mainEmitter = audio_emitter_create();

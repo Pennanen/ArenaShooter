@@ -18,15 +18,17 @@ if (can_shoot && mouse_check_button(mb_left) && ammo >= 1 && !reloading)
 	obj_player.phy_speed_y +=lengthdir_y(0.5,obj_player.gun.image_angle-180);
 	image_angle += irandom_range(-1,1);
 	audio_play_sound_on(global.mainEmitter,laser_rifle,0,1);
+	
+	
 	with(b1)
 	{
+	identifier = irandom_range(0,32000);
 	dmg = other.wpnDmg*random_range(0.9,1.1);
 	spd = other.gunpower;
 	dir = other.image_angle;
-	
-	client_send_bullet();
-	//physics_apply_impulse(x,y,lengthdir_x(spd,dir),lengthdir_y(spd,dir));
+	client_send_bullet(x,y,dir,spd,identifier);
 	}
+	
 	ammo-=1;
 	
 	alarm[0] = room_speed/rps;

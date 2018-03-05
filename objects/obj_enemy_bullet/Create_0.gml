@@ -1,5 +1,8 @@
+idd = 0;
 dmg = 5;
 spd = 1;
+identifier = 0;
+destroy = false;
 particle1 = part_type_create();
 part_type_sprite(particle1,sprite_index,0,0,0);
 
@@ -18,8 +21,8 @@ part_type_life(particle1,33,63);
 emitter1 = part_emitter_create(Sname);
 
 depth = -100;
-image_xscale = 0.01;
-image_yscale = 0.01;
+image_xscale = 0.1;
+image_yscale = 0.1;
 image_alpha = 0;
 
 

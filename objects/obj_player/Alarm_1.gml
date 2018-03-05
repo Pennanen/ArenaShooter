@@ -1,4 +1,3 @@
 dead = false;
-gun.ammo = gun.magazine/2;
-phy_position_x = room_width/2;
-phy_position_y = room_height/2;
+gun.ammo = gun.magazine;
+player_send_spawn();
