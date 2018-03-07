@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "obj_shadow_caster",
     "eventList": [
-        
+        {
+            "id": "ab95b429-c694-435b-86f2-d71be67001e4",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "5b43bc3a-34da-4fae-88da-690bf3345edf"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

@@ -55,12 +55,7 @@ switch(message_id)
 		break;
 	case 4:
 		status = buffer_read(buffer, buffer_s16);
-		xx1 = random_range(0,obj_spawn_1.sprite_width);
-		yy1 = random_range(0,obj_spawn_1.sprite_height);
-		xx2 = random_range(0,obj_spawn_2.sprite_width);
-		yy2 = random_range(0,obj_spawn_2.sprite_height);
-		if (status = 1) {obj_player.phy_position_x = obj_spawn_1.x+xx1;obj_player.phy_position_y = obj_spawn_1.y+yy1}
-		if (status = 2) {obj_player.phy_position_x = obj_spawn_2.x+xx2;obj_player.phy_position_y = obj_spawn_2.y+yy2}
+		obj_player.spawn = status;
 		break;
 	case 5:
 		status = -1;

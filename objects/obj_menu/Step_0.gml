@@ -24,13 +24,19 @@ if (keySelect)
 		{
 		case 0:
 			room_goto(rm_lobby);
-			alarm[0] = 1;
+			alarm[1] = 1;
 			break;
 		case 1:
+			global.multiplayer = true;
+			room_goto(rm_lobby);
+			alarm[0] = 1;
+			break;
+		case 2:
+			global.multiplayer = true;
 			room_goto(rm_hosting);
 			instance_destroy();
 			break;
-		case 2:
+		case 3:
 			game_end();
 		}
 	}

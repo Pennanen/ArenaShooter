@@ -48,14 +48,33 @@ look_angle+=clamp(.7*diff,-15,15);
 
 torso_angle =  leg_angle+angle_difference(look_angle,leg_angle)/2 mod 360;
 }
-else //dead
+else if (spawn = 0)//dead
 {
-phy_position_x =dead_location_x;
-phy_position_y =dead_location_y;
-if(hp < maxhp)
+if (hp <= 0) 
 	{
+	phy_position_x =dead_location_x;
+	phy_position_y =dead_location_y;
 	alarm[1] = room_speed*deathTimer;
 	hp = maxhp;
 	}
 }
-
+else if (spawn = 1|| spawn = 2)
+	{
+	if (!spawned){
+		var xx1 = random_range(0,obj_spawn_1.sprite_width);
+		var yy1 = random_range(0,obj_spawn_1.sprite_height);
+		var xx2 = random_range(0,obj_spawn_2.sprite_width);
+		var yy2 = random_range(0,obj_spawn_2.sprite_height);
+		if (spawn = 1) {phy_position_x = obj_spawn_1.x+xx1;phy_position_y = obj_spawn_1.y+yy1}
+		if (spawn = 2) {phy_position_x = obj_spawn_2.x+xx2;phy_position_y = obj_spawn_2.y+yy2}
+		instance_create_depth(x,y,-200,obj_magic_explosion);
+		spawned = true;
+		}
+		else
+		{
+		dead = false;
+		spawn = 0;
+		spawned = false;
+		gun.ammo = gun.magazine;
+		}
+	}

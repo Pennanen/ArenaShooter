@@ -13,8 +13,14 @@ if (place_meeting(x,y,obj_hole) && !dash)
 		}
 	}
 
-if (fall && scale > 0.4) {scale -= 0.05;phy_speed_x = 0;phy_speed_y = 0;}
-else if (fall) {room_restart();}
+if (fall && scale > 0.2) {scale -= 0.01;phy_speed_x = 0;phy_speed_y = 0;}
+else if (fall) 
+	{
+	alarm[1] = room_speed*deathTimer;
+	hp = maxhp;
+	fall = false;
+	scale = 1;
+	}
 image_xscale = scale+scaleWiggle;
 image_yscale = scale-scaleWiggle;
 if (wiggleTime > 0){

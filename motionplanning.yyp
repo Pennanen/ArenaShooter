@@ -135,6 +135,14 @@
             }
         },
         {
+            "Key": "0c70810c-aadc-4589-bac2-45e66c97b7a3",
+            "Value": {
+                "id": "ee8c8624-17e0-471b-9e92-4258f3be97e9",
+                "resourcePath": "sprites\\spr_magic_explosion_2\\spr_magic_explosion_2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0ca6fb36-4131-406b-8732-154aa75a58a7",
             "Value": {
                 "id": "8a8279ab-dac2-4c02-a5ff-21ea846ec855",
@@ -815,6 +823,14 @@
             }
         },
         {
+            "Key": "726eb23c-110e-416f-a0fe-53deb8d89266",
+            "Value": {
+                "id": "8ef5e7ed-db6a-4a28-8828-b480817190f2",
+                "resourcePath": "sprites\\spr_magic_explosion_1\\spr_magic_explosion_1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7325ffd1-4aba-4a2b-a23b-ddfd027af58a",
             "Value": {
                 "id": "b2fed1a1-f8bb-4631-877d-5ed9e70097ec",
@@ -1151,6 +1167,14 @@
             }
         },
         {
+            "Key": "a6ac0492-baec-4b3e-b085-605f61802c03",
+            "Value": {
+                "id": "d0786d68-5a01-4822-9f91-c69910ea5411",
+                "resourcePath": "sprites\\spr_magic_square\\spr_magic_square.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a8dd1a1f-1d4a-4700-827f-7fcc024ffdff",
             "Value": {
                 "id": "4584313f-7488-4560-a293-be91250c7b8e",
@@ -1311,6 +1335,14 @@
             }
         },
         {
+            "Key": "b9716470-d2f6-41f0-b56c-f53e4c9c87cc",
+            "Value": {
+                "id": "da0a9aba-29b0-410f-9d5b-2cad46bbcb90",
+                "resourcePath": "views\\b9716470-d2f6-41f0-b56c-f53e4c9c87cc.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "b9c60c96-8dde-4850-b6ec-2a3c400c1c11",
             "Value": {
                 "id": "b6250e9c-f4d6-4887-8d61-ad6c4269c093",
@@ -1372,6 +1404,14 @@
                 "id": "6c536fb5-2fd2-4a31-8a15-1f431c0dc5c8",
                 "resourcePath": "scripts\\cp_send_tick\\cp_send_tick.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "ca94cd6d-dfe2-427f-b0dd-6dc0d18ae24b",
+            "Value": {
+                "id": "1b567ffb-bb8f-43ff-8868-52589167541b",
+                "resourcePath": "objects\\obj_magic_explosion\\obj_magic_explosion.yy",
+                "resourceType": "GMObject"
             }
         },
         {
