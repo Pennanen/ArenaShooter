@@ -6,10 +6,10 @@ var hpcol = make_color_rgb(133,255,99);
 if (obj_player.gun.reloading){var ammocol = make_color_rgb(255,255,122);}
 else{var ammocol = make_color_rgb(121,255,241);}
 draw_set_alpha(0.5);
-scr_draw_ring(guiX,guiY,32,2,obj_player.maxhp,obj_player.hp,angle+30,-75,-1,c_black);
-scr_draw_ring(guiX,guiY,32,2,obj_player.gunClip,obj_player.gunAmmo,angle-30,-75,1,c_black);
-scr_draw_ring(guiX,guiY,34,2,obj_player.maxhp,obj_player.hp,angle+30,-75,-1,hpcol);
-scr_draw_ring(guiX,guiY,34,2,obj_player.gunClip,obj_player.gunAmmo,angle-30,-75,1,ammocol);
+scr_draw_ring(guiX,guiY,22,3,obj_player.maxhp,obj_player.hp,angle+30,-75,-1,c_black);
+scr_draw_ring(guiX,guiY,22,3,obj_player.gunClip,obj_player.gunAmmo,angle-30,-75,1,c_black);
+scr_draw_ring(guiX,guiY,24,3,obj_player.maxhp,obj_player.hp,angle+30,-75,-1,hpcol);
+scr_draw_ring(guiX,guiY,24,3,obj_player.gunClip,obj_player.gunAmmo,angle-30,-75,1,ammocol);
 draw_set_alpha(1);
 draw_set_halign(fa_center);
 draw_set_valign(fa_center);

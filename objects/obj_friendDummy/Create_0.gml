@@ -1,8 +1,8 @@
 
 PlayerName = "Player"
+colour = c_lime;
+enemy = false; // causes lights to go off etc
 
-enemy = true; // causes lights to go off etc
-colour = c_red;	
 maxhp = 100;
 hp = maxhp;
 gun = obj_gun_machine;

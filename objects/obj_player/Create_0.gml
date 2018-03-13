@@ -4,10 +4,14 @@ instance_create_depth(x,y,0,obj_gun_machine);
 instance_create_depth(x,y,0,obj_cursor);
 audio_listener_orientation(0,1,0,0,0,1);
 
+phy_fixed_rotation = true;
+
 if (global.multiplayer){alarm[1] = 30;}
 PlayerName = "Player"
 deathTimer = 4;
+
 spawn = 0;
+playerTeam = 0;
 
 spawned = false;
 dead_location_x = room_width/2;

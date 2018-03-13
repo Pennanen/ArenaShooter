@@ -60,6 +60,7 @@ if (hp <= 0)
 }
 else if (spawn = 1|| spawn = 2)
 	{
+	playerTeam = spawn;
 	if (!spawned){
 		var xx1 = random_range(0,obj_spawn_1.sprite_width);
 		var yy1 = random_range(0,obj_spawn_1.sprite_height);

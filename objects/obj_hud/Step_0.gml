@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 guiX = obj_player.x;
-guiY = obj_player.y;
+guiY = obj_player.y-6;
 
 steps++;
 if (steps >= room_speed)

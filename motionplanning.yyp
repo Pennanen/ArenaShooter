@@ -255,6 +255,14 @@
             }
         },
         {
+            "Key": "1dc22bb4-6c40-4831-86e1-6162fab29e9b",
+            "Value": {
+                "id": "77da0d27-ec40-4584-b640-a93f99f41f2f",
+                "resourcePath": "sprites\\spr_friend_hp\\spr_friend_hp.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1ee8633a-9af7-4538-99ce-334e4f4763df",
             "Value": {
                 "id": "f5e25df0-dc84-4f8d-81af-805d2189b243",
@@ -620,6 +628,14 @@
                 "id": "a9be1c5b-b52b-4e59-b273-fa9bbac5962a",
                 "resourcePath": "views\\524e2970-e61f-46fc-988d-72652552807e.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "529548a9-2efb-4c11-8c8a-ae6ec40aafb5",
+            "Value": {
+                "id": "db890653-09b4-4ec0-a5cb-6b7e20eeaf47",
+                "resourcePath": "objects\\obj_explosion_green\\obj_explosion_green.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1175,6 +1191,14 @@
             }
         },
         {
+            "Key": "a749336a-5360-479c-9418-9404144667aa",
+            "Value": {
+                "id": "d963ae06-2bde-4deb-b576-e3244a3b1480",
+                "resourcePath": "objects\\obj_friendly_bullet\\obj_friendly_bullet.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a8dd1a1f-1d4a-4700-827f-7fcc024ffdff",
             "Value": {
                 "id": "4584313f-7488-4560-a293-be91250c7b8e",
@@ -1515,6 +1539,14 @@
             "Value": {
                 "id": "8eed2627-a00c-46c7-ba61-0af8b68d36ba",
                 "resourcePath": "objects\\obj_fists\\obj_fists.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "dd890c1d-5233-4434-957a-9e0f958863ce",
+            "Value": {
+                "id": "da5e5e19-488c-4f1c-9d4c-fb3561b3304c",
+                "resourcePath": "objects\\obj_friendDummy\\obj_friendDummy.yy",
                 "resourceType": "GMObject"
             }
         },

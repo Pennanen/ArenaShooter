@@ -17,9 +17,19 @@ switch(message_id)
 		hp =			buffer_read(buffer,buffer_u8);
 		gun =			buffer_read(buffer,buffer_u16);
 		gun_index =		buffer_read(buffer,buffer_u8);
+		team =		buffer_read(buffer,buffer_u8);
 		if (ds_map_exists(clientmap,string(client)))
-			{ 
+			{
 				clientObject = clientmap[? string(client)];
+				
+				if (team = obj_player.playerTeam && clientObject.object_index = obj_playerDummy) 
+					{
+						with(clientObject){instance_destroy();}
+						l = instance_create_depth(room_width/2,room_height/2,0,obj_friendDummy);
+						clientmap[? string(client)] = l;
+					}
+				if (instance_exists(clientObject))
+				{
 				clientObject.x = xx;
 				clientObject.y = yy;
 				clientObject.look_angle = look_angle;
@@ -29,10 +39,18 @@ switch(message_id)
 				clientObject.hp = hp;
 				clientObject.gun = gun;
 				clientObject.gun_index = gun_index;
+				}
 			}
 		else	
 			{
-				l = instance_create_depth(room_width/2,room_height/2,0,obj_playerDummy);
+				if (team = obj_player.playerTeam) 
+					{
+					l = instance_create_depth(room_width/2,room_height/2,0,obj_friendDummy);
+					}
+				else
+					{
+					l = instance_create_depth(room_width/2,room_height/2,0,obj_playerDummy);
+					}
 				clientmap[? string(client)] = l;
 			};
 	break;
@@ -44,14 +62,24 @@ switch(message_id)
 		var aa =		buffer_read(buffer,buffer_u16);
 		var spd =		buffer_read(buffer,buffer_u16);
 		var idd = 		buffer_read(buffer,buffer_s16);
-		bul = instance_create_depth(xx,yy,0,obj_enemy_bullet);
+		var team = 		buffer_read(buffer,buffer_u8);
+		if (team = obj_player.playerTeam) 
+			{
+			bul = instance_create_depth(xx,yy,0,obj_friendly_bullet);
+			}
+			else
+			{
+			bul = instance_create_depth(xx,yy,0,obj_enemy_bullet);
+			}
 		bul.spd = spd;
 		bul.dir = aa;
 		bul.identifier = idd;
 		break;
 	case 3:
 		status = buffer_read(buffer, buffer_s16);
+		state = buffer_read(buffer, buffer_u8);
 		obj_capture_point.cp_status = status;
+		matchState = state;
 		break;
 	case 4:
 		status = buffer_read(buffer, buffer_s16);
@@ -64,6 +92,7 @@ switch(message_id)
 			{
 				with(obj_bullet){if (identifier = other.status){instance_destroy();}}
 				with(obj_enemy_bullet){if (identifier = other.status){instance_destroy();}}
+				with(obj_friendly_bullet){if (identifier = other.status){instance_destroy();}}
 			}
 	}
 if (buffer_tell(buffer) == buffer_get_size(buffer)) {break;}

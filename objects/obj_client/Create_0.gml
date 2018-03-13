@@ -4,3 +4,4 @@ port = 6510;
 connect = client_connect(ip,port);
 update = 0;
 
+matchState = 0;

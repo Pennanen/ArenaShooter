@@ -18,7 +18,11 @@ switch(message_id)
 		var hp =			buffer_read(buffer, buffer_u8);
 		var gun =			buffer_read(buffer, buffer_u16);
 		var gun_index =		buffer_read(buffer, buffer_u8);
-
+		var team = 0;
+		with(obj_serverClient)
+			{
+			if (client_id = client_id_current) {team = team_id}
+			}
 		
 		buffer_seek(send_buffer, buffer_seek_start, 0);
 		
@@ -33,7 +37,7 @@ switch(message_id)
 		buffer_write(send_buffer, buffer_u8, hp);
 		buffer_write(send_buffer, buffer_u16, gun);
 		buffer_write(send_buffer, buffer_u8, gun_index);
-		
+		buffer_write(send_buffer, buffer_u8, team);
 
 		with(obj_serverClient)
 			{
@@ -46,6 +50,11 @@ switch(message_id)
 		var aa =		buffer_read(buffer, buffer_u16);
 		var spd =		buffer_read(buffer, buffer_u16);
 		var identifier =buffer_read(buffer, buffer_u16);
+		var team = 0;
+		with(obj_serverClient)
+			{
+			if (client_id = client_id_current) {team = team_id}
+			}
 		buffer_seek(bullet_buffer, buffer_seek_start, 0);
 		
 		buffer_write(bullet_buffer, buffer_u8, 2);
@@ -55,6 +64,7 @@ switch(message_id)
 		buffer_write(bullet_buffer, buffer_u16, aa);
 		buffer_write(bullet_buffer, buffer_u16, spd);
 		buffer_write(bullet_buffer, buffer_s16, identifier);
+		buffer_write(bullet_buffer, buffer_u8, team);
 		with(obj_serverClient)
 			{
 			if (client_id != client_id_current) {network_send_raw(self.socket_id,other.bullet_buffer,buffer_tell(other.bullet_buffer))}
@@ -66,14 +76,14 @@ switch(message_id)
 				with(obj_serverClient){if (team_id = 1 && client_id = client_id_current) {other.in_team = 1}}
 				with(obj_serverClient){if (team_id = 2 && client_id = client_id_current) {other.in_team = 2}}
 				
-				if (in_team = 1) {cp_status += 1};
-				else if (in_team = 2) {cp_status -= 1};
+				if (in_team = 1 && cp_canTick) {cp_status += 1;cp_canTick = false;alarm[0] = cp_tick_rate};
+				else if (in_team = 2 && cp_canTick) {cp_status -= 1;cp_canTick = false;alarm[0] = cp_tick_rate};
 		
 		buffer_seek(tick_buffer, buffer_seek_start, 0);
 		
 		buffer_write(tick_buffer, buffer_u8, 3);
 		buffer_write(tick_buffer, buffer_s16, cp_status);
-		
+		buffer_write(tick_buffer, buffer_u8, matchState);
 		with(obj_serverClient)
 			{
 			network_send_raw(self.socket_id,other.tick_buffer,buffer_tell(other.tick_buffer))
