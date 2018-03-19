@@ -80,6 +80,14 @@ switch(message_id)
 		state = buffer_read(buffer, buffer_u8);
 		obj_capture_point.cp_status = status;
 		matchState = state;
+		if (matchState = 1 && !obj_door.open) 
+			{
+			with(obj_door)
+				{
+				if (0 = identifier) {call+=1;}
+				multi = 0;
+				}
+			}
 		break;
 	case 4:
 		status = buffer_read(buffer, buffer_s16);

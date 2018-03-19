@@ -1,0 +1,9 @@
+depth = -9999;
+class_portrait = spr_class_portrait;
+image_index = 0;
+image_speed = 0;
+mouse_on = false;
+scale = 0.5;
+alpha = 0.8;
+image_xscale= scale;
+image_yscale= scale;

@@ -10,7 +10,7 @@ if (keyl || keyr || keyu || keyd)
 	leg_sprite = spr_p_leg_run;
 	torso_sprite = spr_p_torso_run;
 	head_sprite = spr_p_head_run;
-	image_speed = abs(phy_speed)/2.3;
+	image_speed = abs(phy_speed)/2;
 	}
 	else
 	{
