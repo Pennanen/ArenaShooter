@@ -39,17 +39,16 @@ if (can_shoot && mouse_check_button(mb_left) && ammo >= 1 && !reloading)
 	else if (ammo < 1 && !reloading) 
 	{
 	reloading = true;
+	reload = 0;
 	}
 	else if (reloading)
 	{
 	if (reload = reloadTime)
 		{
-		ammo++
-		reload = 0;
+		reloading = false;ammo = magazine;
 		}
 		else
 		{
 		reload++;	
 		}
-		if (ammo = magazine) {reloading = false;}
 	};

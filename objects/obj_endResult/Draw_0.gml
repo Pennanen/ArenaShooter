@@ -1,3 +1,4 @@
 /// @description Insert description here
 // You can write your code in this editor
-mouse_on = false;
+draw_set_font(font0)
+draw_text(x,y,text);

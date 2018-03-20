@@ -76,14 +76,20 @@ switch(message_id)
 				with(obj_serverClient){if (team_id = 1 && client_id = client_id_current) {other.in_team = 1}}
 				with(obj_serverClient){if (team_id = 2 && client_id = client_id_current) {other.in_team = 2}}
 				
-				if (in_team = 1 && cp_canTick) {cp_status += 1;cp_canTick = false;alarm[0] = cp_tick_rate};
-				else if (in_team = 2 && cp_canTick) {cp_status -= 1;cp_canTick = false;alarm[0] = cp_tick_rate};
+				if (matchState = 1)
+				{
+					if (in_team = 1 && cp_canTick) {cp_status += 1;cp_canTick = false;alarm[0] = cp_tick_rate};
+					else if (in_team = 2 && cp_canTick) {cp_status -= 1;cp_canTick = false;alarm[0] = cp_tick_rate};
+				}
+		if (cp_status > 99 && matchState != 3) {matchState = 3;alarm[1] = 120;}
+		else if (cp_status < -99 && matchState != 2) {matchState = 2;alarm[1] = 120;};
 		
 		buffer_seek(tick_buffer, buffer_seek_start, 0);
 		
 		buffer_write(tick_buffer, buffer_u8, 3);
 		buffer_write(tick_buffer, buffer_s16, cp_status);
 		buffer_write(tick_buffer, buffer_u8, matchState);
+		
 		with(obj_serverClient)
 			{
 			network_send_raw(self.socket_id,other.tick_buffer,buffer_tell(other.tick_buffer))

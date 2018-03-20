@@ -84,8 +84,32 @@ switch(message_id)
 			{
 			with(obj_door)
 				{
-				if (0 = identifier) {call+=1;}
 				multi = 0;
+				open = true
+				}
+			}
+			else if (obj_door.open && matchState = 0) 			
+			{
+			with(obj_door)
+				{
+				multi = 0;
+				open = false
+				}
+			}
+		if (matchState = 2)
+			{
+				if (!instance_exists(obj_endResult)){
+				t = instance_create_depth(obj_player.x,obj_player.y,0,obj_endResult);
+				if (obj_player.playerTeam = 2) {t.text = "Victory"}
+				else if (obj_player.playerTeam = 1) {t.text = "Defeat"}
+				}
+			}
+		else if (matchState = 3)
+			{
+				if (!instance_exists(obj_endResult)){
+				t = instance_create_depth(obj_player.x,obj_player.y,0,obj_endResult);
+				if (obj_player.playerTeam = 1) {t.text = "Victory"}
+				else if (obj_player.playerTeam = 2) {t.text = "Defeat"}
 				}
 			}
 		break;

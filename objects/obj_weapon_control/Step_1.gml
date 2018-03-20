@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+/*
 if (keyboard_check(ord("3")) && selected != 0 && !cooldown)
 	{
 	with(obj_player.gun)
@@ -36,3 +37,4 @@ else if (keyboard_check(ord("2")) && selected != 2 && !cooldown)
 	cooldown = true;
 	alarm[0] = 60;
 	}
+	*/

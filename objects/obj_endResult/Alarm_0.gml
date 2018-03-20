@@ -1,3 +1,4 @@
 /// @description Insert description here
 // You can write your code in this editor
-mouse_on = true;
+player_send_spawn();
+instance_destroy();

@@ -3,12 +3,8 @@ instance_create_depth(x,y,0,obj_hud);
 instance_create_depth(x,y,0,obj_gun_machine);
 instance_create_depth(x,y,0,obj_cursor);
 
-//abilities
+//class
 instance_create_depth(x,y,0,obj_class_soldier);
-
-instance_create_depth(x,y,0,obj_ability_dash);
-instance_create_depth(x,y,0,obj_ability_pulsefire);
-instance_create_depth(x,y,0,obj_ability_heal);
 //audio
 audio_listener_orientation(0,1,0,0,0,1);
 

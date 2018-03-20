@@ -16,7 +16,8 @@
                 "Key": "ed6a955d-5826-4f98-a450-10b414266c27",
                 "Value": {
                     "configDeltas": [
-                        "inherited"
+                        "inherited",
+                        "inherited_980ce74b-8f7e-41dc-8005-3bbae0bfcdcb"
                     ],
                     "id": "e7a8d827-faae-4f0a-87be-5875bff1d4ef",
                     "resourcePath": "options\\main\\options_main.yy",
@@ -1071,14 +1072,6 @@
             }
         },
         {
-            "Key": "8d651743-b0c7-46a2-8e64-a3ebee807472",
-            "Value": {
-                "id": "7cbec50a-872f-47c0-a497-4e9b0f064d0d",
-                "resourcePath": "objects\\obj_ability_pulsefire\\obj_ability_pulsefire.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "90508be4-340d-46ce-bd0c-d9167facb733",
             "Value": {
                 "id": "f4d464f8-ed8a-4bf1-b5fc-fb482dfe2861",
@@ -1583,6 +1576,14 @@
             }
         },
         {
+            "Key": "cfd7f732-6d29-4d3e-ac27-aa7bcbb279f2",
+            "Value": {
+                "id": "233e81ad-5a88-438d-9635-818cd00e699a",
+                "resourcePath": "objects\\obj_endResult\\obj_endResult.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d3bfb387-baf6-4eb7-8f9a-ac8e7d25d239",
             "Value": {
                 "id": "276c9dbe-662c-41f7-8835-771547aee1e7",
@@ -1599,10 +1600,10 @@
             }
         },
         {
-            "Key": "d501b5e8-859c-4149-9bc4-49e6ad136f13",
+            "Key": "d6a914d9-9de0-48c8-aee7-92ba796914c5",
             "Value": {
-                "id": "167362b4-97c1-4d72-845c-c16cd2e663b0",
-                "resourcePath": "objects\\obj_ability_heal\\obj_ability_heal.yy",
+                "id": "e81405fb-98a1-4243-a2a9-8c086f1f9e1c",
+                "resourcePath": "objects\\obj_team_class_control\\obj_team_class_control.yy",
                 "resourceType": "GMObject"
             }
         },

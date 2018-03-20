@@ -1,12 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+/*
 if (call == singalNumber)
 	{
 	open = true;
 	}
 	else if (open = true) {open = false;multi = 3;}
-
+*/
 if (up){
 if (open)
 	{

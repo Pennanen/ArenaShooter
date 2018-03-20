@@ -5,3 +5,13 @@ connect = client_connect(ip,port);
 update = 0;
 
 matchState = 0;
+
+
+/*
+Matchstates:
+	0 lobby
+	1 running
+	2 L win
+	3 R win
+	4 reset
+*/

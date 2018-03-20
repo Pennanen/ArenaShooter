@@ -1,4 +1,4 @@
-if (!dead){
+if (!dead && spawn = 0){
 keyl = keyboard_check(ord("A")) ||keyboard_check(vk_left) ;
 keyr = keyboard_check(ord("D")) ||keyboard_check(vk_right) ;
 keyu = keyboard_check(ord("W")) ||keyboard_check(vk_up) ;
@@ -68,11 +68,11 @@ else if (spawn = 1|| spawn = 2)
 		var yy2 = random_range(0,obj_spawn_2.sprite_height);
 		if (spawn = 1) {phy_position_x = obj_spawn_1.x+xx1;phy_position_y = obj_spawn_1.y+yy1}
 		if (spawn = 2) {phy_position_x = obj_spawn_2.x+xx2;phy_position_y = obj_spawn_2.y+yy2}
-		instance_create_depth(x,y,-200,obj_magic_explosion);
 		spawned = true;
 		}
 		else
 		{
+		instance_create_depth(x,y,-200,obj_magic_explosion);
 		dead = false;
 		spawn = 0;
 		spawned = false;

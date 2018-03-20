@@ -1,6 +1,9 @@
 depth = -9999;
 cooldownLength = 0.1;
-masterCooldownLength = 2;
+masterCooldownLength = 3;
+masterCooldown = masterCooldownLength;
+xx = 0;
+yy = 0;
 onCooldown = false;
 onMasterCooldown = false;
 portrait_sprite = spr_control_ability;
@@ -10,7 +13,7 @@ ypos = 0;
 mouse_on = false;
 key = vk_space;
 
-scale = 0.75;
+scale = 0.5;
 alpha = 0.65;
 image_xscale = scale;
 image_yscale = scale;
