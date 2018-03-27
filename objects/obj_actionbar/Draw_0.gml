@@ -1,0 +1,1 @@
+draw_sprite_ext(spr_actionbar,0,xpos,ypos,0.8,0.8,0,c_white,1);

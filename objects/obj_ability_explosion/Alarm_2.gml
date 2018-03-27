@@ -1,0 +1,2 @@
+/// @description MasterCooldown
+onMasterCooldown = false;
