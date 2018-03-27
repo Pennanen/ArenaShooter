@@ -21,12 +21,14 @@ draw_sprite_ext(torso_sprite,image_index,x+lengthdir_x(len,dir),y-4+lengthdir_y(
 var dir = look_angle;
 var len = abs(speed)/2;
 draw_sprite_ext(head_sprite,image_index,x+lengthdir_x(len,dir),y-8+lengthdir_y(len,dir),0.8*image_xscale,0.8*image_yscale,look_angle,colour,1);
-if (enemy){
+if (enemy && hp > 0){
 draw_sprite_ext(spr_enemy_hp,1,x+lengthdir_x(len,dir),y-22+lengthdir_y(len,dir),hp/maxhp,0.8,0,c_white,1);
+draw_sprite_ext(spr_enemy_hp,2,x+lengthdir_x(len,dir),y-22+lengthdir_y(len,dir),hpImaginary/maxhp,0.8,0,c_white,1);
 draw_sprite_ext(spr_enemy_hp,0,x+lengthdir_x(len,dir),y-22+lengthdir_y(len,dir),hp/maxhp,0.8,0,c_white,1);
 }
-else
+else if (hp > 0)
 {
 draw_sprite_ext(spr_friend_hp,1,x+lengthdir_x(len,dir),y-22+lengthdir_y(len,dir),hp/maxhp,0.8,0,c_white,1);
+draw_sprite_ext(spr_enemy_hp,2,x+lengthdir_x(len,dir),y-22+lengthdir_y(len,dir),hpImaginary/maxhp,0.8,0,c_white,1);
 draw_sprite_ext(spr_friend_hp,0,x+lengthdir_x(len,dir),y-22+lengthdir_y(len,dir),hp/maxhp,0.8,0,c_white,1);	
 }

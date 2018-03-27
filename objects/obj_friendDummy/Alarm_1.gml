@@ -6,7 +6,7 @@ l.target = self;
 l.scale = 2;
 with(l)
 	{
-	var col = c_lime;
+	var col = c_white;
 	light_set_color(col);
 	}
 	
@@ -15,6 +15,6 @@ l.target = self;
 l.scale = 1;
 with(l)
 	{
-	var col = c_lime;
+	var col = c_white;
 	light_set_color(col);
 	}

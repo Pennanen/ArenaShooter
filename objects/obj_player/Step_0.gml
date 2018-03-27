@@ -39,4 +39,11 @@ with(gun)
 	image_yscale = other.scale;
 }
 
+if (hp < hpImaginary && !balanceHp){balanceHp = true;hpMulti = 0;}
+else if (balanceHp) 
+	{
+		if (hp < hpImaginary){hpImaginary-=hpMulti;hpMulti+=0.05}
+		else{hpImaginary = hp;balanceHp = false}
+	}
+	else {hpImaginary = hp;balanceHp = false;hpMulti = 0;}
 

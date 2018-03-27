@@ -4,4 +4,5 @@ shakex = 0;
 shakey = 0;
 targetx = 0;
 targety = 0;
+angle = 0;
 target = obj_player;

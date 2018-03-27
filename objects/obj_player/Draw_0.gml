@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (!dead){
+if (!dead && hp > 0){
 draw_shadow_sprite(leg_sprite,4,4,1,leg_angle);
 draw_shadow_sprite(head_sprite,4,4,1,look_angle);
 draw_shadow_sprite(torso_sprite,4,4,1,torso_angle);

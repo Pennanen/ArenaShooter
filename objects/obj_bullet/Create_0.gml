@@ -5,12 +5,12 @@ dir = 0;
 dmg = 10;
 particle1 = part_type_create();
 randomize();
-scr_shake(2,2,5);
+scr_shake(1,1,7);
 part_type_sprite(particle1,sprite_index,0,0,0);
 
 
 part_type_size(particle1,0.3,0.4,-0.045,0);
-part_type_scale(particle1,1,1);
+part_type_scale(particle1,0.9,0.9);
 part_type_color3(particle1,c_aqua,c_blue,c_dkgray);
 part_type_alpha3(particle1,1.00,0.67,0.04);
 part_type_speed(particle1,0,0,0,1);

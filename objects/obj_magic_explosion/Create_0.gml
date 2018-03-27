@@ -23,18 +23,10 @@ part_emitter_burst(Sname,emitter2,particle2,2);
 part_emitter_burst(Sname,emitter2,particle2,2)
 */
 
-depth = -400;
+depth = -500;
 image_xscale = 1;
 image_yscale = 1;
 image_alpha = 0;
+image_speed =0.5;
 
-l = instance_create_depth(x,y,-100,obj_light);
-l.target = self;
-l.scale = 2;
-with(l)
-	{
-	var col = c_lime;
-	light_set_color(col);
-	}
-l.destroy = true;
 //alarm[0] = 5;

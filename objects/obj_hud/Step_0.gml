@@ -3,7 +3,6 @@
 
 guiX = obj_player.x;
 guiY = obj_player.y-6;
-
 steps++;
 if (steps >= room_speed)
 	{

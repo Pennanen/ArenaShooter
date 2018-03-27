@@ -12,7 +12,13 @@ if (x != xprevious || y != yprevious)
 	torso_sprite = spr_p_torso_idle;
 	head_sprite = spr_p_head_idle;	
 	}
-	
+if (hp < hpImaginary && !balanceHp){balanceHp = true;hpMulti = 0;}
+else if (balanceHp) 
+	{
+		if (hp < hpImaginary){hpImaginary-=hpMulti;hpMulti+=0.05}
+		else{hpImaginary = hp;balanceHp = false}
+	}
+	else {hpImaginary = hp;balanceHp = false;hpMulti = 0;}
 if (wiggleTime > 0){
 scaleWiggle = scr_wiggle(1,-wiggleTime/20,wiggleTime);
 wiggleTime -= 1;

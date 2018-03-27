@@ -66,13 +66,15 @@ else if (spawn = 1|| spawn = 2)
 		var yy1 = random_range(0,obj_spawn_1.sprite_height);
 		var xx2 = random_range(0,obj_spawn_2.sprite_width);
 		var yy2 = random_range(0,obj_spawn_2.sprite_height);
-		if (spawn = 1) {phy_position_x = obj_spawn_1.x+xx1;phy_position_y = obj_spawn_1.y+yy1}
-		if (spawn = 2) {phy_position_x = obj_spawn_2.x+xx2;phy_position_y = obj_spawn_2.y+yy2}
+		if (spawn = 1) {phy_position_x = obj_spawn_1.x+xx1;phy_position_y = obj_spawn_1.y+yy1
+					instance_create_depth(xx1,yy1,-200,obj_magic_explosion);}
+		if (spawn = 2) {phy_position_x = obj_spawn_2.x+xx2;phy_position_y = obj_spawn_2.y+yy2
+					instance_create_depth(xx2,yy2,-200,obj_magic_explosion);}
+		
 		spawned = true;
 		}
 		else
 		{
-		instance_create_depth(x,y,-200,obj_magic_explosion);
 		dead = false;
 		spawn = 0;
 		spawned = false;

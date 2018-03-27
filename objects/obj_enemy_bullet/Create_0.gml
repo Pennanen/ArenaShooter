@@ -1,5 +1,5 @@
 idd = 0;
-dmg = 5;
+dmg = irandom_range(7,10);
 spd = 1;
 identifier = 0;
 destroy = false;
@@ -7,7 +7,7 @@ particle1 = part_type_create();
 part_type_sprite(particle1,sprite_index,0,0,0);
 
 part_type_size(particle1,0.18,0.68,-0.16,0);
-part_type_scale(particle1,0.6,0.6);
+part_type_scale(particle1,0.55,0.55);
 part_type_color3(particle1,c_red,c_yellow,c_white);
 part_type_alpha3(particle1,1.00,0.67,0.04);
 part_type_speed(particle1,0.1,1,-0.05,1);

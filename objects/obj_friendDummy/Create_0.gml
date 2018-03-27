@@ -5,6 +5,10 @@ enemy = false; // causes lights to go off etc
 
 maxhp = 100;
 hp = maxhp;
+hpImaginary = hp;
+hpMulti = 0;
+balanceHp = false;
+
 gun = obj_gun_machine;
 gun_index = 0;
 look_angle = 0;
