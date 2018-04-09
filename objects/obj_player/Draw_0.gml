@@ -16,11 +16,11 @@ with(gun) {
 
 var dir = -phy_rotation;
 var len = abs(phy_speed)/8;
-draw_sprite_ext(torso_sprite,image_index,x+lengthdir_x(len,dir),y-4+lengthdir_y(len,dir),image_xscale*0.8,1*image_yscale,torso_angle,c_white,1);
+draw_sprite_ext(torso_sprite,image_index,x+lengthdir_x(len,dir),y+lengthdir_y(len,dir),image_xscale*0.8,1*image_yscale,torso_angle,c_white,1);
 
 
 var dir = -phy_rotation;
 var len = abs(phy_speed)/4;
-draw_sprite_ext(head_sprite,image_index,x+lengthdir_x(len,dir),y-6+lengthdir_y(len,dir),0.7*image_xscale,0.7*image_yscale,look_angle,c_white,1);
+draw_sprite_ext(head_sprite,image_index,x+lengthdir_x(len,dir),y+lengthdir_y(len,dir),0.7*image_xscale,0.7*image_yscale,look_angle,c_white,1);
 
 }

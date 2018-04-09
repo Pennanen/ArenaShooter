@@ -1,5 +1,5 @@
 idd = 0;
-dmg = irandom_range(7,10);
+dmg = irandom_range(4,6);
 spd = 1;
 identifier = 0;
 destroy = false;

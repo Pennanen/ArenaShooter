@@ -5,7 +5,7 @@ dir = 0;
 dmg = 10;
 particle1 = part_type_create();
 randomize();
-scr_shake(1,1,7);
+scr_shake(1.5,1.5,7);
 part_type_sprite(particle1,sprite_index,0,0,0);
 
 

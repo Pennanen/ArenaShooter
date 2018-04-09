@@ -13,7 +13,7 @@ ypos = 0;
 mouse_on = false;
 key = vk_space;
 
-scale = 0.5;
+scale = 0.75;
 alpha = 0.65;
 image_xscale = scale;
 image_yscale = scale;
