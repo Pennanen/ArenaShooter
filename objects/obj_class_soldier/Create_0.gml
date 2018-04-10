@@ -13,7 +13,8 @@ image_xscale= scale;
 image_yscale= scale;
 for(i=0;i<maxAbilities;i++)
 {
-ability = instance_create_depth(x,y,0,obj_ability_dash);
+if (i = 0){ability = instance_create_depth(x,y,0,obj_ability_dash);}
+if (i = 1){ability = instance_create_depth(x,y,0,obj_ability_shield);}
 ability.xx = xx+i*34;
 ability.yy = yy+18;
 }

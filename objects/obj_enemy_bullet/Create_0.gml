@@ -3,6 +3,7 @@ dmg = irandom_range(4,6);
 spd = 1;
 identifier = 0;
 destroy = false;
+teamid = 0;
 particle1 = part_type_create();
 part_type_sprite(particle1,sprite_index,0,0,0);
 

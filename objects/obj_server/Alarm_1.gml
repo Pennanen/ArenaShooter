@@ -1,5 +1,6 @@
 cp_status = 0;
 matchState = 0;
+alarm[2] = 120;
 		buffer_seek(tick_buffer, buffer_seek_start, 0);
 		
 		buffer_write(tick_buffer, buffer_u8, 3);

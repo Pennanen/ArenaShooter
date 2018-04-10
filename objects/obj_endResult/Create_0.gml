@@ -3,6 +3,6 @@
 alarm[0] = 120;
 depth = -9999;
 text = "Game Ending"
-
+index = 0;
 x = obj_camera.targetx;
 y = obj_camera.targety-80;

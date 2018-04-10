@@ -47,3 +47,4 @@ else if (balanceHp)
 	}
 	else {hpImaginary = hp;balanceHp = false;hpMulti = 0;}
 
+scr_teamPassage();

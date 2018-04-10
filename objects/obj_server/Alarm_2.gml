@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+
 matchState = 1;
 		buffer_seek(tick_buffer, buffer_seek_start, 0);
 		

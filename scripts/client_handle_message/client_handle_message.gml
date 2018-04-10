@@ -74,6 +74,7 @@ switch(message_id)
 		bul.spd = spd;
 		bul.dir = aa;
 		bul.identifier = idd;
+		bul.teamid = team;
 		break;
 	case 3:
 		status = buffer_read(buffer, buffer_s16);
@@ -100,16 +101,16 @@ switch(message_id)
 			{
 				if (!instance_exists(obj_endResult)){
 				t = instance_create_depth(obj_player.x,obj_player.y,0,obj_endResult);
-				if (obj_player.playerTeam = 2) {t.text = "Victory"}
-				else if (obj_player.playerTeam = 1) {t.text = "Defeat"}
+				if (obj_player.playerTeam = 2) {t.text = "Victory";t.index = 0}
+				else if (obj_player.playerTeam = 1) {t.text = "Defeat";t.index = 1}
 				}
 			}
 		else if (matchState = 3)
 			{
 				if (!instance_exists(obj_endResult)){
 				t = instance_create_depth(obj_player.x,obj_player.y,0,obj_endResult);
-				if (obj_player.playerTeam = 1) {t.text = "Victory"}
-				else if (obj_player.playerTeam = 2) {t.text = "Defeat"}
+				if (obj_player.playerTeam = 1) {t.text = "Victory";t.index = 0}
+				else if (obj_player.playerTeam = 2) {t.text = "Defeat";t.index = 1}
 				}
 			}
 		break;

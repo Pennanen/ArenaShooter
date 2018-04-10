@@ -4,7 +4,7 @@ maxClients = 8;
 cp_status = 0;
 cp_tick_rate = 5;
 cp_canTick = true;
-
+alarm[2] = 120;
 matchState = 0;
 
 server = server_create(port,maxClients);

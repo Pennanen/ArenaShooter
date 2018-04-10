@@ -13,3 +13,17 @@ else
 x+=lengthdir_x(spd,dir);
 y+=lengthdir_y(spd,dir);
 if (spd > 4.5){spd -=0.15;}
+
+if (place_meeting(x,y,obj_teamPassage))
+	{
+	col = collision_point(x,y,obj_teamPassage,0,0);
+	if (instance_exists(col))
+		{
+		if (col.team != teamid) 
+			{
+			client_send_bullet_hit(identifier);
+			instance_destroy();
+			destroy = true;
+			}	
+		}
+	}
