@@ -1,20 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (insideView(x,y))
-{
-
-part_emitter_region(Sname,emitter1,x,x,y,y,ps_shape_ellipse, ps_distr_gaussian);
-part_emitter_burst(Sname,emitter1,particle1,4);
-}
-else
-{
-	part_emitter_clear(Sname,emitter1);
-	
-}
+dmg = type;
+scale = 0.005*type+0.4;
+image_xscale = scale;
+image_yscale = scale;
 x+=lengthdir_x(spd,dir);
 y+=lengthdir_y(spd,dir);
 if (spd > 4.5){spd -=0.15;}
-
+image_angle = dir;
 /*
 if (spd > 3.5){spd -=0.1;}
 var hold = 45/spd;

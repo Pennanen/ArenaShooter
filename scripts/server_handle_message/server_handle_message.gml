@@ -50,6 +50,7 @@ switch(message_id)
 		var aa =		buffer_read(buffer, buffer_u16);
 		var spd =		buffer_read(buffer, buffer_u16);
 		var identifier =buffer_read(buffer, buffer_u16);
+		var type =buffer_read(buffer, buffer_u16);
 		var team = 0;
 		with(obj_serverClient)
 			{
@@ -63,7 +64,8 @@ switch(message_id)
 		buffer_write(bullet_buffer, buffer_u16, yy);
 		buffer_write(bullet_buffer, buffer_u16, aa);
 		buffer_write(bullet_buffer, buffer_u16, spd);
-		buffer_write(bullet_buffer, buffer_s16, identifier);
+		buffer_write(bullet_buffer, buffer_u16, identifier);
+		buffer_write(bullet_buffer, buffer_u16, type);
 		buffer_write(bullet_buffer, buffer_u8, team);
 		with(obj_serverClient)
 			{

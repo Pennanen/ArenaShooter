@@ -9,4 +9,5 @@ buffer_write(obj_client.bullet_buffer,buffer_u16,argument1); //y
 buffer_write(obj_client.bullet_buffer,buffer_u16,argument2); //angle
 buffer_write(obj_client.bullet_buffer,buffer_u16,argument3); //spd
 buffer_write(obj_client.bullet_buffer,buffer_s16,argument4); //id
+buffer_write(obj_client.bullet_buffer,buffer_s16,argument5); //type
 network_send_raw(obj_client.socket,obj_client.bullet_buffer,buffer_tell(obj_client.bullet_buffer));}

@@ -61,7 +61,8 @@ switch(message_id)
 		var yy =		buffer_read(buffer,buffer_u16);
 		var aa =		buffer_read(buffer,buffer_u16);
 		var spd =		buffer_read(buffer,buffer_u16);
-		var idd = 		buffer_read(buffer,buffer_s16);
+		var idd = 		buffer_read(buffer,buffer_u16);
+		var type = 		buffer_read(buffer,buffer_u16);
 		var team = 		buffer_read(buffer,buffer_u8);
 		if (team = obj_player.playerTeam) 
 			{
@@ -72,6 +73,7 @@ switch(message_id)
 			bul = instance_create_depth(xx,yy,0,obj_enemy_bullet);
 			}
 		bul.spd = spd;
+		bul.type = type;
 		bul.dir = aa;
 		bul.identifier = idd;
 		bul.teamid = team;

@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-x = obj_player.x+lengthdir_x(10,image_angle-56);
-y = obj_player.y-5+lengthdir_y(10,image_angle-56);
+x = obj_player.x+lengthdir_x(8,image_angle-45);
+y = obj_player.y+lengthdir_y(8,image_angle-45);
 if (distance_to_point(mouse_x,mouse_y)>16){
 image_angle = point_direction(x,y,mouse_x,mouse_y);}
 else {image_angle = obj_player.look_angle};
@@ -22,51 +22,57 @@ if (can_shoot && mouse_check_button(mb_left) && ammo >= 4 && !reloading)
 	{
 	identifier = irandom_range(0,32000);
 	dmg = other.wpnDmg*random_range(0.9,1.1);
+	type = dmg;
 	spd = other.gunpower;
-	dir = other.image_angle+9;
-	client_send_bullet(x,y,dir,spd,identifier);
+	dir = other.image_angle+13;
+	client_send_bullet(x,y,dir,spd,identifier,dmg);
 	}
 	with(b2)
 	{
 	identifier = irandom_range(0,32000);
 	dmg = other.wpnDmg*random_range(0.9,1.1);
+	type = dmg;
 	spd = other.gunpower;
-	dir = other.image_angle+4;
-	client_send_bullet(x,y,dir,spd,identifier);
+	dir = other.image_angle+7;
+	client_send_bullet(x,y,dir,spd,identifier,dmg);
 	}
 	with(b3)
 	{
 	identifier = irandom_range(0,32000);
 	dmg = other.wpnDmg*random_range(0.9,1.1);
+	type = dmg;
 	spd = other.gunpower;
-	dir = other.image_angle-4;
-	client_send_bullet(x,y,dir,spd,identifier);
+	dir = other.image_angle-7;
+	client_send_bullet(x,y,dir,spd,identifier,dmg);
 	}
 	with(b4)
 	{
 	identifier = irandom_range(0,32000);
 	dmg = other.wpnDmg*random_range(0.9,1.1);
+	type = dmg;
 	spd = other.gunpower;
-	dir = other.image_angle-9;
-	client_send_bullet(x,y,dir,spd,identifier);
+	dir = other.image_angle-13;
+	client_send_bullet(x,y,dir,spd,identifier,dmg);
 	}
 	with(b0)
 	{
 	identifier = irandom_range(0,32000);
 	dmg = other.wpnDmg*random_range(0.9,1.1);
+	type = dmg;
 	spd = other.gunpower;
 	dir = other.image_angle;
-	client_send_bullet(x,y,dir,spd,identifier);
+	client_send_bullet(x,y,dir,spd,identifier,2);
 	}
-
+	audio_play_sound(laser_blaster,1,0);
+	audio_sound_pitch(laser_blaster,1.1);
+	audio_sound_gain(laser_blaster,0.25,0);
 	obj_player.phy_speed_x +=lengthdir_x(5,obj_player.gun.image_angle-180);
 	obj_player.phy_speed_y +=lengthdir_y(5,obj_player.gun.image_angle-180);
 	ammo-=5;
-	audio_play_sound_on(global.mainEmitter,laser_burst,0,1);
 	alarm[0] = room_speed/rps;
-	sprite_index = spr_gun_1_shoot;
+	sprite_index = spr_gun_2_shoot;
 	image_index = 0;
-	image_speed = 3;
+	image_speed = 1.5;
 	}
 	else if (ammo < 4 && !reloading) 
 	{

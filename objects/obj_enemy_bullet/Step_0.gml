@@ -1,15 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (insideView(x,y))
-{
-part_emitter_region(Sname,emitter1,x,x,y,y,ps_shape_ellipse, ps_distr_gaussian);
-part_emitter_stream(Sname,emitter1,particle1,8);
-}
-else
-{
-	part_emitter_clear(Sname,emitter1);
-	
-}
+dmg = type;
+scale = 0.005*type+0.4;
+image_xscale = scale;
+image_yscale = scale;
+
 x+=lengthdir_x(spd,dir);
 y+=lengthdir_y(spd,dir);
 if (spd > 4.5){spd -=0.15;}
@@ -27,3 +22,4 @@ if (place_meeting(x,y,obj_teamPassage))
 			}	
 		}
 	}
+image_angle = dir;

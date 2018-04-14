@@ -28,4 +28,18 @@ if (colliderInstance != noone && destroy = false)
 		instance_destroy();
 		destroy = true;
 	}
+colliderInstance = collision_line(x,y,x+lengthdir_x(spd,dir),y+lengthdir_y(spd,dir),obj_practice_doll,true,false);
+if (colliderInstance != noone && destroy = false)
+	{
+	if (colliderInstance.dead = false){
+	with(colliderInstance)
+		{
+			
+		hp-=other.dmg;
+		wiggleTime = 15;
+		}
+		client_send_bullet_hit(identifier);
+		instance_destroy();
+		destroy = true;}
+	}
 	
