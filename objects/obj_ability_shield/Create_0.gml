@@ -12,7 +12,7 @@ xpos = 0;
 ypos = 0;
 mouse_on = false;
 key = mb_right;
-
+shield_index = 0;
 scale = 0.75;
 alpha = 0.65;
 image_xscale = scale;

@@ -2,7 +2,7 @@
 colliderInstance = collision_line(x,y,x+lengthdir_x(spd,dir),y+lengthdir_y(spd,dir),obj_wall_parent,true,false);
 if (colliderInstance != noone && destroy = false)
 	{
-	client_send_bullet_hit(identifier);
+	client_send_bullet_hit(identifier,false);
 	instance_destroy();
 	destroy = true;
 	}
@@ -10,7 +10,7 @@ if (colliderInstance != noone && destroy = false)
 colliderInstance = collision_line(x,y,x+lengthdir_x(spd,dir),y+lengthdir_y(spd,dir),obj_door,true,false);
 if (colliderInstance != noone && destroy = false)
 	{
-	client_send_bullet_hit(identifier);
+	client_send_bullet_hit(identifier,false);
 	instance_destroy();
 	destroy = true;
 	}
@@ -24,7 +24,7 @@ if (colliderInstance != noone && destroy = false)
 		hp-=other.dmg;
 		wiggleTime = 12;
 		}
-		client_send_bullet_hit(identifier);
+		client_send_bullet_hit(identifier,true);
 		instance_destroy();
 		destroy = true;
 	}
@@ -38,7 +38,7 @@ if (colliderInstance != noone && destroy = false)
 		hp-=other.dmg;
 		wiggleTime = 15;
 		}
-		client_send_bullet_hit(identifier);
+		client_send_bullet_hit(identifier,false);
 		instance_destroy();
 		destroy = true;}
 	}

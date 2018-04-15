@@ -23,7 +23,7 @@ switch(message_id)
 			{
 			if (client_id = client_id_current) {team = team_id}
 			}
-		
+		if (hp == 4000) {team = -10}
 		buffer_seek(send_buffer, buffer_seek_start, 0);
 		
 		buffer_write(send_buffer, buffer_u8, 1);
@@ -51,6 +51,7 @@ switch(message_id)
 		var spd =		buffer_read(buffer, buffer_u16);
 		var identifier =buffer_read(buffer, buffer_u16);
 		var type =buffer_read(buffer, buffer_u16);
+		var sprite =buffer_read(buffer, buffer_u16);
 		var team = 0;
 		with(obj_serverClient)
 			{
@@ -66,6 +67,7 @@ switch(message_id)
 		buffer_write(bullet_buffer, buffer_u16, spd);
 		buffer_write(bullet_buffer, buffer_u16, identifier);
 		buffer_write(bullet_buffer, buffer_u16, type);
+		buffer_write(bullet_buffer, buffer_u16, sprite);
 		buffer_write(bullet_buffer, buffer_u8, team);
 		with(obj_serverClient)
 			{
@@ -114,12 +116,12 @@ switch(message_id)
 	break;
 	case 5:
 		var identifier = buffer_read(buffer, buffer_s16);
-		
+		var collider = buffer_read(buffer, buffer_bool);
 		buffer_seek(tick_buffer, buffer_seek_start, 0);
 		
 		buffer_write(tick_buffer, buffer_u8, 5);
 		buffer_write(tick_buffer, buffer_s16, identifier);
-		
+		buffer_write(tick_buffer, buffer_bool, collider);
 		with(obj_serverClient)
 			{
 			network_send_raw(self.socket_id,other.tick_buffer,buffer_tell(other.tick_buffer))

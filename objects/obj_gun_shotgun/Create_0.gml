@@ -1,16 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
-can_shoot = true;
-
-baserps = 2.4;
+can_shoot = false;
+alarm[0] = 30;
+baserps = 2;
 rps = baserps;
-gunpower = 11;
+gunpower = 6.5;
 
-magazine = 10;
+magazine = 15;
 ammo = magazine;
 
-wpnDmg = 11;
-reloadTime = 5;
+wpnDmg = 7;
+reloadTime = 7;
 reload = 0;
 reloading = false;
 	image_speed = 0.4;

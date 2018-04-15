@@ -19,3 +19,5 @@ else if (onCooldown && !onMasterCooldown)
 {
 
 }
+if (onMasterCooldown){if (shield_index != 8){shield_index++}else{shield_index = 8;};}
+else{if (shield_index > 0){shield_index--}else{shield_index = 0}}

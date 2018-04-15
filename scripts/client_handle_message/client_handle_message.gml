@@ -20,6 +20,7 @@ switch(message_id)
 		team =		buffer_read(buffer,buffer_u8);
 		if (ds_map_exists(clientmap,string(client)))
 			{
+				
 				clientObject = clientmap[? string(client)];
 				
 				if (team = obj_player.playerTeam && clientObject.object_index = obj_playerDummy) 
@@ -39,6 +40,7 @@ switch(message_id)
 				clientObject.hp = hp;
 				clientObject.gun = gun;
 				clientObject.gun_index = gun_index;
+				if (team = -10){with(clientObject){instance_destroy();}}
 				}
 			}
 		else	
@@ -63,6 +65,7 @@ switch(message_id)
 		var spd =		buffer_read(buffer,buffer_u16);
 		var idd = 		buffer_read(buffer,buffer_u16);
 		var type = 		buffer_read(buffer,buffer_u16);
+		var sprite = 		buffer_read(buffer,buffer_u16);
 		var team = 		buffer_read(buffer,buffer_u8);
 		if (team = obj_player.playerTeam) 
 			{
@@ -77,6 +80,7 @@ switch(message_id)
 		bul.dir = aa;
 		bul.identifier = idd;
 		bul.teamid = team;
+		bul.sprite_index = sprite;
 		break;
 	case 3:
 		status = buffer_read(buffer, buffer_s16);
@@ -123,12 +127,21 @@ switch(message_id)
 	case 5:
 		status = -1;
 		status = buffer_read(buffer, buffer_s16);
+		var collidedInstance = buffer_read(buffer, buffer_bool);
 		if (status != -1)
 			{
 				with(obj_bullet){if (identifier = other.status){instance_destroy();}}
 				with(obj_enemy_bullet){if (identifier = other.status){instance_destroy();}}
 				with(obj_friendly_bullet){if (identifier = other.status){instance_destroy();}}
 			}
+		if (collidedInstance == true)
+			{
+			audio_play_sound(sound_explosion,1,0);
+			audio_sound_gain(sound_explosion,0.05,0);
+			audio_sound_pitch(sound_explosion,5);
+			}
+		
+		
 	}
 if (buffer_tell(buffer) == buffer_get_size(buffer)) {break;}
 }

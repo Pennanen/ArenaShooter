@@ -23,7 +23,7 @@ if (can_shoot && mouse_check_button(mb_left) && ammo >= 1 && !reloading)
 	with(b1)
 	{
 	identifier = irandom_range(0,32000);
-	dmg = other.wpnDmg*random_range(0.9,1.1);
+	dmg = other.wpnDmg;
 	type = dmg;
 	spd = other.gunpower;
 	dir = other.image_angle;

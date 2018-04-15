@@ -30,5 +30,15 @@ else if (selected = 3)
 	obj_player.gun = g;
 	selected = 0;
 	}
+else if (selected = 4)
+	{
+	with(obj_player.gun)
+		{
+		instance_destroy();
+		}
+	g = instance_create_depth(obj_player.x,obj_player.y,0,wpn[4])
+	obj_player.gun = g;
+	selected = 0;
+	}
 }
 }

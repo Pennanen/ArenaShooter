@@ -14,4 +14,8 @@ else if (keyboard_check(ord("3"))&& selected = 0)
 	{	
 	selected = 3;	
 	}
+else if (keyboard_check(ord("4"))&& selected = 0)
+	{	
+	selected = 4;	
+	}
 }}

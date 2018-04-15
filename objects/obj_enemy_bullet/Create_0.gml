@@ -2,6 +2,7 @@ idd = 0;
 dmg = 1;
 spd = 1;
 type = 0;
+startspd = -1;
 identifier = 0;
 destroy = false;
 teamid = 0;

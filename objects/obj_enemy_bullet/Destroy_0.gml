@@ -1,5 +1,6 @@
 
 if (insideView(x,y))
 {
-instance_create_depth(x,y,-100,obj_explosion);
+a = instance_create_depth(x,y,-100,obj_magic_explosion_small);
+a.color = c_red;
 }

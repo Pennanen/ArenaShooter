@@ -14,4 +14,3 @@ wiggleTime =0;
 scaleWiggle = 0;
 scale = 0.75;
 image_speed = 0;
-alarm[1] = 2;

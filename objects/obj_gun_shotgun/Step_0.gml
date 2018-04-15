@@ -21,7 +21,7 @@ if (can_shoot && mouse_check_button(mb_left) && ammo >= 4 && !reloading)
 	with(b1)
 	{
 	identifier = irandom_range(0,32000);
-	dmg = other.wpnDmg*random_range(0.9,1.1);
+	dmg = other.wpnDmg;
 	type = dmg;
 	spd = other.gunpower;
 	dir = other.image_angle+13;
@@ -30,7 +30,7 @@ if (can_shoot && mouse_check_button(mb_left) && ammo >= 4 && !reloading)
 	with(b2)
 	{
 	identifier = irandom_range(0,32000);
-	dmg = other.wpnDmg*random_range(0.9,1.1);
+	dmg = other.wpnDmg;
 	type = dmg;
 	spd = other.gunpower;
 	dir = other.image_angle+7;
@@ -39,7 +39,7 @@ if (can_shoot && mouse_check_button(mb_left) && ammo >= 4 && !reloading)
 	with(b3)
 	{
 	identifier = irandom_range(0,32000);
-	dmg = other.wpnDmg*random_range(0.9,1.1);
+	dmg = other.wpnDmg;
 	type = dmg;
 	spd = other.gunpower;
 	dir = other.image_angle-7;
@@ -48,7 +48,7 @@ if (can_shoot && mouse_check_button(mb_left) && ammo >= 4 && !reloading)
 	with(b4)
 	{
 	identifier = irandom_range(0,32000);
-	dmg = other.wpnDmg*random_range(0.9,1.1);
+	dmg = other.wpnDmg;
 	type = dmg;
 	spd = other.gunpower;
 	dir = other.image_angle-13;
@@ -57,7 +57,7 @@ if (can_shoot && mouse_check_button(mb_left) && ammo >= 4 && !reloading)
 	with(b0)
 	{
 	identifier = irandom_range(0,32000);
-	dmg = other.wpnDmg*random_range(0.9,1.1);
+	dmg = other.wpnDmg;
 	type = dmg;
 	spd = other.gunpower;
 	dir = other.image_angle;

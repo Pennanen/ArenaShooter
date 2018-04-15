@@ -1,5 +1,6 @@
 
 //audio
+startspd = -1;
 spd = 0;
 dir = 0;
 dmg = 10;
@@ -7,12 +8,12 @@ scale = 1;
 type = 0;
 destroy = false;
 randomize();
-scr_shake(1.5,1.5,7);
+scr_shake(2,2,4);
 
 image_index = 1;
 depth = -100;
-image_xscale = scale;
-image_yscale = scale;
+image_xscale = scale+0.02*type;
+image_yscale = scale-0.009*type;
 image_alpha = 1;
 
 l = instance_create_depth(x,y,-100,obj_light);

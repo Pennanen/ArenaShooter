@@ -1,5 +1,5 @@
 depth = -9999;
-cooldownLength = 0.1;
+cooldownLength = 0.045;
 masterCooldownLength = 3;
 masterCooldown = masterCooldownLength;
 xx = 0;

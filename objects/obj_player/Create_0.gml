@@ -2,7 +2,6 @@ instance_create_depth(x,y,0,obj_camera);
 instance_create_depth(x,y,0,obj_hud);
 instance_create_depth(x,y,0,obj_gun_machine);
 instance_create_depth(x,y,0,obj_cursor);
-
 //class
 instance_create_depth(x,y,0,obj_class_soldier);
 //audio
