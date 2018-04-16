@@ -16,7 +16,6 @@ else
 {
 scaleWiggle = 0;	
 }
-if (hp < 0 && !dead) {alarm[0] = 240;instance_create_depth(x,y,-100,obj_magic_explosion);alarm[1] = 4;dead = true}
+if (hp <= 0 && !dead) {alarm[0] = 180;instance_create_depth(x,y,-100,obj_magic_explosion);alarm[1] = 4;dead = true}
 image_xscale = scale+scaleWiggle;
 image_yscale = scale-scaleWiggle;
-if (!dead) {image_index = 0} else {image_index = 1}

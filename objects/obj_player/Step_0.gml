@@ -1,4 +1,4 @@
-
+max_spd = 2.2-(0.1*weight);
 if (hp < 1) {dead = true;}
 
 audio_listener_position(x,y,0);

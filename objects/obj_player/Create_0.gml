@@ -2,6 +2,7 @@ instance_create_depth(x,y,0,obj_camera);
 instance_create_depth(x,y,0,obj_hud);
 instance_create_depth(x,y,0,obj_gun_machine);
 instance_create_depth(x,y,0,obj_cursor);
+
 //class
 instance_create_depth(x,y,0,obj_class_soldier);
 //audio
@@ -42,9 +43,11 @@ dashDir = 0;
 dash = false;
 dashCooldown = false;
 
-force = 20;
-dampening = 0.2;
-max_spd = 2.0;
+force = 10;
+dampening = 0.1;
+max_spd = 1.8;
+weight = 0;
+
 scale = 1;
 scaleWiggle = 0;
 wiggleTime = 0;

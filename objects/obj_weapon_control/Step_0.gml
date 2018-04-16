@@ -8,6 +8,7 @@ if (selected = 1)
 		}
 	g = instance_create_depth(obj_player.x,obj_player.y,0,wpn[1])
 	obj_player.gun = g;
+	obj_player.weight = 2;
 	selected = 0;
 	}
 else if (selected = 2)
@@ -18,6 +19,7 @@ else if (selected = 2)
 		}
 	g = instance_create_depth(obj_player.x,obj_player.y,0,wpn[2])
 	obj_player.gun = g;
+	obj_player.weight = 4.5;
 	selected = 0;
 	}
 else if (selected = 3)
@@ -28,6 +30,7 @@ else if (selected = 3)
 		}
 	g = instance_create_depth(obj_player.x,obj_player.y,0,wpn[3])
 	obj_player.gun = g;
+	obj_player.weight = 4;
 	selected = 0;
 	}
 else if (selected = 4)
@@ -38,6 +41,7 @@ else if (selected = 4)
 		}
 	g = instance_create_depth(obj_player.x,obj_player.y,0,wpn[4])
 	obj_player.gun = g;
+	obj_player.weight = 0;
 	selected = 0;
 	}
 }

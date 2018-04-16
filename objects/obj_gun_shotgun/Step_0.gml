@@ -66,28 +66,28 @@ if (can_shoot && mouse_check_button(mb_left) && ammo >= 4 && !reloading)
 	audio_play_sound(laser_blaster,1,0);
 	audio_sound_pitch(laser_blaster,1.1);
 	audio_sound_gain(laser_blaster,0.25,0);
-	obj_player.phy_speed_x +=lengthdir_x(5,obj_player.gun.image_angle-180);
-	obj_player.phy_speed_y +=lengthdir_y(5,obj_player.gun.image_angle-180);
+	obj_player.phy_speed_x +=lengthdir_x(3,obj_player.gun.image_angle-180);
+	obj_player.phy_speed_y +=lengthdir_y(3,obj_player.gun.image_angle-180);
 	ammo-=5;
 	alarm[0] = room_speed/rps;
 	sprite_index = spr_gun_2_shoot;
 	image_index = 0;
 	image_speed = 1.5;
 	}
-	else if (ammo < 4 && !reloading) 
+	else if (ammo < 5 && !reloading) 
 	{
 	reloading = true;
+	reload = 0;
 	}
 	else if (reloading)
 	{
 	if (reload = reloadTime)
 		{
-		ammo++
-		reload = 0;
+		reloading = false;
+		ammo = magazine;
 		}
 		else
 		{
 		reload++;	
 		}
-		if (ammo = magazine) {reloading = false;}
 	};

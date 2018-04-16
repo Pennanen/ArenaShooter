@@ -134,12 +134,10 @@ switch(message_id)
 				with(obj_enemy_bullet){if (identifier = other.status){instance_destroy();}}
 				with(obj_friendly_bullet){if (identifier = other.status){instance_destroy();}}
 			}
-		if (collidedInstance == true)
-			{
-			audio_play_sound(sound_explosion,1,0);
-			audio_sound_gain(sound_explosion,0.05,0);
-			audio_sound_pitch(sound_explosion,5);
-			}
+		if (collidedInstance == true &&!audio_is_playing(sound_explosion)){
+	audio_play_sound(sound_explosion,1,0);
+	audio_sound_gain(sound_explosion,0.05,0);
+	audio_sound_pitch(sound_explosion,5);}
 		
 		
 	}

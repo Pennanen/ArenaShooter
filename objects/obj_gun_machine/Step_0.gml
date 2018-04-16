@@ -6,7 +6,7 @@ if (distance_to_point(mouse_x,mouse_y)>16){
 image_angle = point_direction(x,y,mouse_x,mouse_y);}
 else {image_angle = obj_player.look_angle};
 depth = obj_player.depth+1;
-
+rps = 5+0.5*(baserps/ammo);
 if (can_shoot && mouse_check_button(mb_left) && ammo >= 1 && !reloading)
 	{
 	var tipx = x+lengthdir_x(10,image_angle);

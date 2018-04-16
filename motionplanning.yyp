@@ -184,6 +184,14 @@
             }
         },
         {
+            "Key": "12402583-cfd9-451d-add0-b8178344e800",
+            "Value": {
+                "id": "44ad8bbb-50ed-4089-8a78-85776d892e7f",
+                "resourcePath": "sounds\\music_loop\\music_loop.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "126f9522-83b6-4254-9325-f107c87420c8",
             "Value": {
                 "id": "33d523e7-1e16-44a2-b527-0a8853377d81",

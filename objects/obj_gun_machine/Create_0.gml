@@ -2,14 +2,13 @@
 // You can write your code in this editor
 can_shoot = false;
 alarm[0] = 30;
-baserps = 12;
+baserps = 18;
 rps = baserps;
-
-magazine = 15;
+magazine = 10;
 ammo = magazine;
-wpnDmg = 4.5;
+wpnDmg = 10;
 gunpower = 9;
-reloadTime = 60;
+reloadTime = 40;
 reload = 0;
 reloading = false;
 	image_speed = 0.4;

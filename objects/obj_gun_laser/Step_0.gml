@@ -6,6 +6,7 @@ if (distance_to_point(mouse_x,mouse_y)>16){
 image_angle = point_direction(x,y,mouse_x,mouse_y);}
 else {image_angle = obj_player.look_angle};
 depth = obj_player.depth+1;
+if (ammo = 1) {wpnDmg = 35} else {wpnDmg = 8}
 if (can_shoot && mouse_check_button(mb_left) && ammo >= 1 && !reloading)
 	{
 	var tipx = x+lengthdir_x(10,image_angle);
@@ -17,7 +18,7 @@ if (can_shoot && mouse_check_button(mb_left) && ammo >= 1 && !reloading)
 	obj_player.phy_speed_y +=lengthdir_y(0.5,obj_player.gun.image_angle-180);
 	image_angle += irandom_range(-0.5-obj_player.phy_speed,0.5+obj_player.phy_speed);
 	audio_play_sound(laser_rifle,1,0);
-	audio_sound_pitch(laser_rifle,1.5);
+	if (wpnDmg = 10){audio_sound_pitch(laser_rifle,random_range(1.4,1.6));}else{audio_sound_pitch(laser_rifle,1.2);}
 	audio_sound_gain(laser_rifle,0.2,0);
 	with(b1)
 	{
