@@ -1904,6 +1904,14 @@
             }
         },
         {
+            "Key": "e5ab06d8-1f12-4303-9b14-cbe5ab4bf278",
+            "Value": {
+                "id": "7934acef-9956-4c60-b86e-491b9220f1af",
+                "resourcePath": "sprites\\spr_icons\\spr_icons.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e652f1b5-446e-4021-95f7-fcb92febab9b",
             "Value": {
                 "id": "65ab8c71-62d2-48a4-9c78-4b8547fe5596",
@@ -2032,6 +2040,14 @@
             }
         },
         {
+            "Key": "f8c4d260-0741-4a9d-b1af-3a8cfcdcea5b",
+            "Value": {
+                "id": "abdb4ebc-3b28-4261-9e20-3e45de89588c",
+                "resourcePath": "scripts\\client_send_object\\client_send_object.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f8e28ad5-a63f-401e-81df-20f8960c799e",
             "Value": {
                 "id": "85c613fa-b68c-4fc5-9c20-3d591be37700",
@@ -2154,6 +2170,7 @@
         "c8be3374-493d-4e58-a338-5bac06fa7024",
         "911cab2d-115b-4cba-a505-f84294cc3644",
         "09758211-e98e-4921-bfeb-c3dd8e0a321d",
+        "f8c4d260-0741-4a9d-b1af-3a8cfcdcea5b",
         "7fb01a1a-b1b5-4e47-adb7-25e01e507bcc"
     ],
     "tutorial": ""

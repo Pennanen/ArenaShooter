@@ -1,6 +1,13 @@
 
 PlayerName = "Player"
 
+prevx = x;
+prevy = y;
+tox = x;
+toy = y;
+time = 0;
+
+
 enemy = true; // causes lights to go off etc
 colour = c_red;	
 maxhp = 100;

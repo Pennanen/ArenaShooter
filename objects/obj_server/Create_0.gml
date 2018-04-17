@@ -1,9 +1,15 @@
 
 port = 6510;
 maxClients = 8;
+
+
 cp_status = 0;
-cp_tick_rate = 5;
+cp_tick_rate = 10;
 cp_canTick = true;
+cp_captured = 0;
+cp_capture_progress = 0;
+
+
 alarm[2] = 120;
 matchState = 0;
 

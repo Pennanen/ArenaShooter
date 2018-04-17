@@ -28,7 +28,7 @@ if (can_shoot && mouse_check_button(mb_left) && ammo >= 1 && !reloading)
 	spd = other.gunpower;
 	dir = other.image_angle;
 	image_angle = dir;
-	sprite_index = spr_laser;
+	if (other.ammo > 1){sprite_index = spr_laser;}
 	client_send_bullet(x,y,dir,spd,identifier,dmg);
 	}
 	

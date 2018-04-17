@@ -8,7 +8,9 @@ player_on = false;
 enemy_on = false;
 friend_on = false;
 
-cp_status = 0;
+cp_status_1 = 0;
+cp_status_2 = 0;
+cp_captured = 0;
 can_tick = true;
 image_speed = 0;
 tick_rate = (room_speed)*0.5;

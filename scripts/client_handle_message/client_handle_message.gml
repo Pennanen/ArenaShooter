@@ -8,15 +8,16 @@ switch(message_id)
 	{
 	case 1:
 		client =		buffer_read(buffer,buffer_u16);
-		xx =			buffer_read(buffer,buffer_f32);
-		yy =			buffer_read(buffer,buffer_f32);
-		look_angle =	buffer_read(buffer,buffer_f32);
-		torso_angle =	buffer_read(buffer,buffer_f32);
-		leg_angle =		buffer_read(buffer,buffer_f32);
+		xx =			buffer_read(buffer,buffer_s16);
+		yy =			buffer_read(buffer,buffer_s16);
+		look_angle =	buffer_read(buffer,buffer_s16);
+		torso_angle =	buffer_read(buffer,buffer_s16);
+		leg_angle =		buffer_read(buffer,buffer_s16);
 		i_index =		buffer_read(buffer,buffer_u8);
-		hp =			buffer_read(buffer,buffer_u8);
+		var hp =			buffer_read(buffer,buffer_u8);
 		gun =			buffer_read(buffer,buffer_u16);
 		gun_index =		buffer_read(buffer,buffer_u8);
+		tim =			buffer_read(buffer,buffer_u16);
 		team =		buffer_read(buffer,buffer_u8);
 		if (ds_map_exists(clientmap,string(client)))
 			{
@@ -31,8 +32,10 @@ switch(message_id)
 					}
 				if (instance_exists(clientObject))
 				{
-				clientObject.x = xx;
-				clientObject.y = yy;
+				clientObject.tox = xx;
+				clientObject.toy = yy;
+				clientObject.prevx = clientObject.x;
+				clientObject.prevy = clientObject.y;
 				clientObject.look_angle = look_angle;
 				clientObject.torso_angle = torso_angle;
 				clientObject.leg_angle = leg_angle;
@@ -40,6 +43,8 @@ switch(message_id)
 				clientObject.hp = hp;
 				clientObject.gun = gun;
 				clientObject.gun_index = gun_index;
+				clientObject.time = sendRate;
+				
 				if (team = -10){with(clientObject){instance_destroy();}}
 				}
 			}
@@ -83,9 +88,12 @@ switch(message_id)
 		bul.sprite_index = sprite;
 		break;
 	case 3:
-		status = buffer_read(buffer, buffer_s16);
-		state = buffer_read(buffer, buffer_u8);
-		obj_capture_point.cp_status = status;
+		var status1 = buffer_read(buffer, buffer_s16);
+		//var status2 = buffer_read(buffer, buffer_s16);
+		//var captured = buffer_read(buffer, buffer_u8);
+		var state = buffer_read(buffer, buffer_u8);
+		obj_capture_point.cp_status_1 = status1;
+		//obj_capture_point.cp_status_2 = status2;
 		matchState = state;
 		if (matchState = 1 && !obj_door.open) 
 			{
@@ -134,11 +142,17 @@ switch(message_id)
 				with(obj_enemy_bullet){if (identifier = other.status){instance_destroy();}}
 				with(obj_friendly_bullet){if (identifier = other.status){instance_destroy();}}
 			}
-		if (collidedInstance == true &&!audio_is_playing(sound_explosion)){
+		if (collidedInstance == true &&!audio_is_playing(sound_explosion))
+		{
 	audio_play_sound(sound_explosion,1,0);
 	audio_sound_gain(sound_explosion,0.05,0);
 	audio_sound_pitch(sound_explosion,5);}
-		
+			break;
+	case 6:
+		var object = buffer_read(buffer, buffer_s16);
+		var xx = buffer_read(buffer, buffer_s16);
+		var yy = buffer_read(buffer, buffer_s16);
+	if (object_exists(object)){instance_create_depth(xx,yy,0,object)}
 		
 	}
 if (buffer_tell(buffer) == buffer_get_size(buffer)) {break;}

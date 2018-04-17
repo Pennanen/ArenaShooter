@@ -52,6 +52,8 @@ else if (spawn = 0)//dead
 {
 if (hp <= 0) 
 	{
+	instance_create_depth(x,y,0,obj_magic_explosion);
+	client_send_object(x,y,obj_magic_explosion);
 	phy_position_x =dead_location_x;
 	phy_position_y =dead_location_y;
 	alarm[1] = room_speed*deathTimer;

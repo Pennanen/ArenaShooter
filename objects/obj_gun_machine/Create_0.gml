@@ -2,7 +2,7 @@
 // You can write your code in this editor
 can_shoot = false;
 alarm[0] = 30;
-baserps = 18;
+baserps = 22;
 rps = baserps;
 magazine = 10;
 ammo = magazine;

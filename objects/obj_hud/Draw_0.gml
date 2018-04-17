@@ -11,9 +11,9 @@ var yy = obj_camera.targety+135;
 draw_sprite_ext(spr_friend_hp,1,xx,yy+6,2.5*(obj_player.gunAmmo/obj_player.gunClip),2,0,ammocol,1);
 draw_sprite_ext(spr_friend_hp,2,xx,yy+6,2.5*(obj_player.gunAmmo/obj_player.gunClip),2,0,ammocol,1);	
 
-draw_sprite_ext(spr_friend_hp,1,xx,yy,2.5*(obj_player.hp/obj_player.maxhp),2,0,c_white,1);
-draw_sprite_ext(spr_enemy_hp,2,xx,yy,2.5*(obj_player.hpImaginary/obj_player.maxhp),2,0,c_white,1);
-draw_sprite_ext(spr_friend_hp,0,xx,yy,2.5*(obj_player.hp/obj_player.maxhp),2,0,c_white,1);	
+draw_sprite_ext(spr_friend_hp,1,xx,yy-5,2.5*(obj_player.hpImaginary/obj_player.maxhp),2,0,c_white,1);
+draw_sprite_ext(spr_enemy_hp,2,xx,yy-5,2.5*(obj_player.hpImaginary/obj_player.maxhp),2,0,c_white,1);
+draw_sprite_ext(spr_friend_hp,0,xx,yy-5,2.5*(obj_player.hp/obj_player.maxhp),2,0,c_white,1);	
 
 /*
 draw_set_alpha(0.5);

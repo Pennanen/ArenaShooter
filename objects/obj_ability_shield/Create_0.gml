@@ -15,6 +15,9 @@ key = mb_right;
 shield_index = 0;
 scale = 0.75;
 alpha = 0.65;
+
+icon = 0;
+
 image_xscale = scale;
 image_yscale = scale;
 image_speed = 0;
