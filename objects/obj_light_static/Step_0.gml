@@ -8,7 +8,7 @@ if (destroy)
 else
 {
 scale +=random_range(0.02,-0.02);
-if (scale > 1.5) {scale = 1.4};
-if (scale < 1.3) {scale = 1.4}
+if (scale > 1) {scale = 1};
+if (scale < 0.8) {scale = 0.8}
 }
 light_set_scale(scale);

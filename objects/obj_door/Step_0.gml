@@ -10,54 +10,54 @@ if (call == singalNumber)
 if (up){
 if (open)
 	{
-	if (phy_position_y > (startPosy - sprite_height)){phy_position_y -= multi;multi+=0.5}
-	else {phy_position_y = (startPosy - sprite_height)}
+	if (y > (startPosy - sprite_height)){y -= multi;multi+=0.5}
+	else {y = (startPosy - sprite_height)}
 	}
 	else
 	{
 	if (image_alpha > 0){image_alpha -= 0.2;}	
-	if (phy_position_y < startPosy){phy_position_y += multi;multi+=0.5;}
-	else {phy_position_y = startPosy}
+	if (y < startPosy){y += multi;multi+=0.5;}
+	else {y = startPosy}
 	}
 }
 if (down){
 if (open)
 	{
-	if (phy_position_y < (startPosy + sprite_height)){phy_position_y += multi;multi+=0.5}
-	else {phy_position_y = (startPosy + sprite_height)}
+	if (y < (startPosy + sprite_height)){y += multi;multi+=0.5}
+	else {y = (startPosy + sprite_height)}
 	}
 	else
 	{
 	if (image_alpha > 0){image_alpha -= 0.2;}	
-	if (phy_position_y > startPosy){phy_position_y -= multi;multi+=0.5;}
-	else {phy_position_y = startPosy}
+	if (y > startPosy){y -= multi;multi+=0.5;}
+	else {y = startPosy}
 	}
 }
 if (right){
 if (open)
 	{
 	if (image_alpha < 1){image_alpha += 0.2;}
-	if (phy_position_x < (startPosx + sprite_width)){phy_position_x += multi;multi+=0.1}
-	else {phy_position_x = (startPosx + sprite_width)}
+	if (x < (startPosx + sprite_width)){x += multi;multi+=0.1}
+	else {x = (startPosx + sprite_width)}
 	}
 	else
 	{
 	if (image_alpha > 0){image_alpha -= 0.2;}	
-	if (phy_position_x > startPosx){phy_position_x -= multi;multi+=0.1;}
-	else {phy_position_x = startPosx}
+	if (x > startPosx){x -= multi;multi+=0.1;}
+	else {x = startPosx}
 	}
 }
 if (left){
 if (open)
 	{
 	if (image_alpha < 1){image_alpha += 0.2;}
-	if (phy_position_x > (startPosx - sprite_width)){phy_position_x -= multi;multi+=0.1}
-	else {phy_position_x = (startPosx - sprite_width)}
+	if (x > (startPosx - sprite_width)){x -= multi;multi+=0.1}
+	else {x = (startPosx - sprite_width)}
 	}
 	else
 	{
 	if (image_alpha > 0){image_alpha -= 0.2;}	
-	if (phy_position_x < startPosx){phy_position_x += multi;multi+=0.1;}
-	else {phy_position_x = startPosx}
+	if (x < startPosx){x += multi;multi+=0.1;}
+	else {x = startPosx}
 	}
 }

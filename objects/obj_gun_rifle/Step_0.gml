@@ -13,9 +13,9 @@ if (can_shoot && mouse_check_button(mb_left) && ammo >= 1 && !reloading)
 	can_shoot = false;
 	
 	b1 = instance_create_depth(tipx,tipy,depth,obj_bullet);
-	obj_player.phy_speed_x +=lengthdir_x(0.5,obj_player.gun.image_angle-180);
-	obj_player.phy_speed_y +=lengthdir_y(0.5,obj_player.gun.image_angle-180);
-	image_angle += irandom_range(-0.5-obj_player.phy_speed,0.5+obj_player.phy_speed);
+	obj_player.Vx +=lengthdir_x(0.5,obj_player.gun.image_angle-180);
+	obj_player.Vy +=lengthdir_y(0.5,obj_player.gun.image_angle-180);
+	image_angle += irandom_range(-0.25-obj_player.velocity,0.25+obj_player.velocity);
 	audio_play_sound(laser_rifle,1,0);
 	audio_sound_pitch(laser_rifle,1.5);
 	audio_sound_gain(laser_rifle,0.2,0);
@@ -39,7 +39,7 @@ if (can_shoot && mouse_check_button(mb_left) && ammo >= 1 && !reloading)
 	else if (ammo < 1 && !reloading) 
 	{
 	sprite_index = spr_gun_3_charge;
-	image_speed = 0.8;
+	image_speed = 0.5;
 	reloading = true;
 	reload = 0;
 	}

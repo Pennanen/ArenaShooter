@@ -10,33 +10,21 @@ if (keyl || keyr || keyu || keyd)
 	leg_sprite = spr_p_leg_run;
 	torso_sprite = spr_p_torso_run;
 	head_sprite = spr_p_head_run;
-	image_speed = abs(phy_speed)/2;
+	image_speed = max(abs(Vx),abs(Vy))/1.8;
 	}
 	else
 	{
 	leg_sprite = spr_p_leg_idle;
-	if (leg_angle = leg_angleprev){image_speed = 1;}else{image_speed = 2;}
 	torso_sprite = spr_p_torso_idle;
 	head_sprite = spr_p_head_idle;	
 	}
 	
 	
 
-leg_angleprev = leg_angle;
 
-if (keyl||keyr||keyu||keyd){
-	var dir = point_direction(phy_position_xprevious,phy_position_yprevious,phy_position_x,phy_position_y);
-diff = angle_difference(dir,-phy_rotation)+(angle_difference(point_direction(x,y,mouse_x,mouse_y),leg_angle))/4;
-leg_angle+=clamp(.7*diff,-12,12);
-}
-else
-{
-		var dir = point_direction(x,y,mouse_x,mouse_y)
-diff = angle_difference(dir,leg_angle);
-leg_angle+=clamp(.7*diff,-15,15);
-	
-}
-phy_rotation = -leg_angle;
+
+
+
 
 
 
@@ -54,8 +42,8 @@ if (hp <= 0)
 	{
 	instance_create_depth(x,y,0,obj_magic_explosion);
 	client_send_object(x,y,obj_magic_explosion);
-	phy_position_x =dead_location_x;
-	phy_position_y =dead_location_y;
+	x =dead_location_x;
+	y =dead_location_y;
 	alarm[1] = room_speed*deathTimer;
 	hp = maxhp;
 	}
@@ -68,9 +56,9 @@ else if (spawn = 1|| spawn = 2)
 		var yy1 = random_range(0,obj_spawn_1.sprite_height);
 		var xx2 = random_range(0,obj_spawn_2.sprite_width);
 		var yy2 = random_range(0,obj_spawn_2.sprite_height);
-		if (spawn = 1) {phy_position_x = obj_spawn_1.x+xx1;phy_position_y = obj_spawn_1.y+yy1
+		if (spawn = 1) {x = obj_spawn_1.x+xx1;y = obj_spawn_1.y+yy1
 					instance_create_depth(xx1,yy1,-200,obj_magic_explosion);}
-		if (spawn = 2) {phy_position_x = obj_spawn_2.x+xx2;phy_position_y = obj_spawn_2.y+yy2
+		if (spawn = 2) {x = obj_spawn_2.x+xx2;y = obj_spawn_2.y+yy2
 					instance_create_depth(xx2,yy2,-200,obj_magic_explosion);}
 		
 		spawned = true;

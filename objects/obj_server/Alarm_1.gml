@@ -1,4 +1,6 @@
 cp_status = 0;
+cp_capture = 0;
+cp_captured = 0;
 matchState = 0;
 alarm[2] = 120;
 		buffer_seek(tick_buffer, buffer_seek_start, 0);
@@ -6,6 +8,7 @@ alarm[2] = 120;
 		buffer_write(tick_buffer, buffer_u8, 3);
 		buffer_write(tick_buffer, buffer_s16, cp_status);
 		buffer_write(tick_buffer, buffer_u8, matchState);
+
 		with(obj_serverClient)
 			{
 			network_send_raw(self.socket_id,other.tick_buffer,buffer_tell(other.tick_buffer))

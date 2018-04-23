@@ -17,7 +17,7 @@ if (keyboard_check_pressed(key) && !onCooldown && !onMasterCooldown)
 	}
 else if (onCooldown && !onMasterCooldown)
 {
-	var len = 155;
+	var len = 15;
 	
 	var W = obj_player.keyu;
 	var A = obj_player.keyl*2; // shift by 1 bit
@@ -48,6 +48,9 @@ break;
 }
 var xf = lengthdir_x(len,dashDir);
 var yf = lengthdir_y(len,dashDir);
-with(obj_player){
-physics_apply_impulse(x,y,xf,yf);}
+with(obj_player)
+	{
+	Vx = xf;
+	Vy = yf;
+	}
 }

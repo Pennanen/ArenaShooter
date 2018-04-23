@@ -1,11 +1,11 @@
 /// @description Cooldown
 with(obj_player){
-if (phy_speed_x > max_spd) {phy_speed_x -= 1};
-if (phy_speed_x < -max_spd) {phy_speed_x += 1};
+if (Vx > max_spd) {Vx -= 1};
+if (Vx < -max_spd) {Vx += 1};
 
-if (phy_speed_y > max_spd) {phy_speed_y -= 1};
-if (phy_speed_y < -max_spd) {phy_speed_y += 1};
-if (phy_speed_x > max_spd || phy_speed_x < -max_spd || phy_speed_y > max_spd || phy_speed_y < -max_spd)
+if (Vy > max_spd) {Vy -= 1};
+if (Vy < -max_spd) {Vy += 1};
+if (Vx > max_spd || Vx < -max_spd || Vy > max_spd || Vy < -max_spd)
 {
 dash = true;
 other.onCooldown = true;

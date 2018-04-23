@@ -7,6 +7,11 @@ identifier = 0;
 destroy = false;
 teamid = 0;
 startspd = -1;
+
+startx = x;
+starty = y;
+
+
 depth = -100;
 image_xscale = 0.1;
 image_yscale = 0.1;

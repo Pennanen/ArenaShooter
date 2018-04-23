@@ -6,7 +6,7 @@ prevy = y;
 tox = x;
 toy = y;
 time = 0;
-
+oldHp = 100;
 
 enemy = true; // causes lights to go off etc
 colour = c_red;	

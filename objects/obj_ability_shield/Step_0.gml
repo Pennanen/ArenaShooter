@@ -13,7 +13,6 @@ if (mouse_check_button_pressed(key) && !onCooldown && !onMasterCooldown)
 	masterCooldown = masterCooldownLength;
 	alarm[2] = room_speed;
 	onCooldown = true;
-	obj_player.dash = true;
 	}
 else if (onCooldown && !onMasterCooldown)
 {

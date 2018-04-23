@@ -63,11 +63,12 @@ if (can_shoot && mouse_check_button(mb_left) && ammo >= 4 && !reloading)
 	dir = other.image_angle;
 	client_send_bullet(x,y,dir,spd,identifier,2);
 	}
+
 	audio_play_sound(laser_blaster,1,0);
-	audio_sound_pitch(laser_blaster,1.1);
+	audio_sound_pitch(laser_blaster,1);
 	audio_sound_gain(laser_blaster,0.25,0);
-	obj_player.phy_speed_x +=lengthdir_x(3,obj_player.gun.image_angle-180);
-	obj_player.phy_speed_y +=lengthdir_y(3,obj_player.gun.image_angle-180);
+	obj_player.Vx +=lengthdir_x(3,obj_player.gun.image_angle-180);
+	obj_player.Vy +=lengthdir_y(3,obj_player.gun.image_angle-180);
 	ammo-=5;
 	alarm[0] = room_speed/rps;
 	sprite_index = spr_gun_2_shoot;

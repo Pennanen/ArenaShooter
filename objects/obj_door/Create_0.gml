@@ -3,7 +3,7 @@
 alarm[0] = 2;
 open = false;
 multi = 0;
-startPosy = phy_position_y;
-startPosx = phy_position_x;
+startPosy = y;
+startPosx = x;
 call = 0;
 

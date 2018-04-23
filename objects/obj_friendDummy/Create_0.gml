@@ -2,6 +2,12 @@
 PlayerName = "Player"
 colour = c_lime;
 enemy = false; // causes lights to go off etc
+oldHp = 100;
+prevx = x;
+prevy = y;
+tox = x;
+toy = y;
+time = 0;
 
 maxhp = 100;
 hp = maxhp;

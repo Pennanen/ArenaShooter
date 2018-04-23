@@ -15,12 +15,12 @@ draw_sprite_ext(gun,gun_index,xx,yy,1,1,look_angle,colour,1);
 
 var dir = torso_angle;
 var len = abs(speed)/4;
-draw_sprite_ext(torso_sprite,image_index,x+lengthdir_x(len,dir),y+lengthdir_y(len,dir),image_xscale,1.4*image_yscale,torso_angle,colour,1);
+draw_sprite_ext(torso_sprite,image_index,x+lengthdir_x(len,dir),y+lengthdir_y(len,dir),image_xscale*0.8,1*image_yscale,torso_angle,colour,1);
 
 
 var dir = look_angle;
 var len = abs(speed)/2;
-draw_sprite_ext(head_sprite,image_index,x+lengthdir_x(len,dir),y+lengthdir_y(len,dir),0.8*image_xscale,0.8*image_yscale,look_angle,colour,1);
+draw_sprite_ext(head_sprite,image_index,x+lengthdir_x(len,dir),y+lengthdir_y(len,dir),0.7*image_xscale,0.7*image_yscale,look_angle,colour,1);
 if (enemy){
 draw_sprite_ext(spr_enemy_hp,1,x+lengthdir_x(len,dir),y-22+lengthdir_y(len,dir),hp/maxhp,0.8,0,c_white,1);
 draw_sprite_ext(spr_enemy_hp,2,x+lengthdir_x(len,dir),y-22+lengthdir_y(len,dir),hpImaginary/maxhp,0.8,0,c_white,1);

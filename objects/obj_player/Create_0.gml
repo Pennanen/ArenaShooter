@@ -8,8 +8,7 @@ instance_create_depth(x,y,0,obj_class_soldier);
 //audio
 audio_listener_orientation(0,1,0,0,0,1);
 
-phy_fixed_rotation = true;
-
+c = c_white;
 if (global.multiplayer){alarm[1] = 30;}
 PlayerName = "Player"
 deathTimer = 4;
@@ -23,7 +22,7 @@ dead_location_y = -500;
 if (global.multiplayer){dead = true;}else{dead = false;}
 global.mainEmitter = audio_emitter_create();
 audio_emitter_gain(global.mainEmitter,0.1);
-maxhp = 100;
+maxhp = 150;
 hp = maxhp;
 hpImaginary = hp;
 hpMulti = 0;
@@ -43,9 +42,14 @@ dashDir = 0;
 dash = false;
 dashCooldown = false;
 
-force = 10;
-dampening = 0.1;
-max_spd = 1.8;
+Vx = 0;		Vy = 0;
+Ax = 0.4;	Ay = 0.4;
+velocity = 0;
+
+dampening = 0.2;
+
+base_spd = 1.8;
+max_spd = 0;
 weight = 0;
 
 scale = 1;
@@ -56,7 +60,7 @@ depth = -y/100;
 look_angle = 0;
 torso_angle = 0;
 leg_angle = 0;
-leg_angleprev = leg_angle;
+
 
 leg_sprite = spr_p_leg_idle;
 torso_sprite = spr_p_torso_idle;

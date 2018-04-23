@@ -6,8 +6,6 @@ image_xscale = scale+0.02*type;
 image_yscale = scale-0.009*type;
 x+=lengthdir_x(spd,dir);
 y+=lengthdir_y(spd,dir);
-if (startspd = -1){startspd = spd};
-if (spd > startspd-(startspd/3)){spd -=0.1;}
 image_angle = dir;
 /*
 if (spd > 3.5){spd -=0.1;}

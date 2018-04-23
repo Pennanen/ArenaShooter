@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (x != tox){x = lerp(prevx,tox,time/time)}else{x = tox;}
-if (y != toy){y = lerp(prevy,toy,time/time)}else{y = toy;}
+if (x != tox){x = lerp(x,tox,0.5)}else{x = tox;}
+if (y != toy){y = lerp(y,toy,0.5)}else{y = toy;}
 if (x != xprevious || y != yprevious)
 	{
 	leg_sprite = spr_p_leg_run;
