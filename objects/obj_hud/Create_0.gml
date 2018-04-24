@@ -13,3 +13,15 @@ steps = 0;
 s = 0;
 m = 0;
 depth = -3000;
+
+hpX = 0;
+hpY = 154;
+
+ammoX = -200;
+ammoY = 145;
+
+hpAnchorX = obj_camera.targetx+hpX;
+hpAnchorY = obj_camera.targety+hpY;
+
+ammoAnchorX = obj_camera.targetx+ammoX;
+ammoAnchorY = obj_camera.targety+ammoY;

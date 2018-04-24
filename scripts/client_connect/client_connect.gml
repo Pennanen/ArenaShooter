@@ -1,7 +1,7 @@
 var ip = argument0;
 var port = argument1;
 connect = -1;
-socket = network_create_socket_ext(network_socket_tcp,port);
+socket = network_create_socket(network_socket_tcp);
 
 connect = network_connect_raw(socket, ip, port);
 if (connect < 0) {show_error("Could not connect to server!",true)};

@@ -13,7 +13,7 @@ ypos = 0;
 mouse_on = false;
 key = mb_right;
 shield_index = 0;
-scale = 0.75;
+scale = 0.5;
 alpha = 0.65;
 
 icon = 0;
